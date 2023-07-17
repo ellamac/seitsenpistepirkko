@@ -1,4 +1,4 @@
-export const pangrams = [
+export const pangramData = [
   "aakkosittain",
   "aakkosnimi",
   "aalloittainen",
@@ -20161,3 +20161,4 @@ export const pangrams = [
   "överisti",
   "öykkäröidä",
 ];
+export default pangramData;

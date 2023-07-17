@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import "./styles/answers.css";
 import "./styles/found.css";
+import "./styles/ranking.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

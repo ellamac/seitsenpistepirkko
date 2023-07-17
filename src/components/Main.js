@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Hive from "./Hive";
 import { isPangram, countPoints } from "../helpers/pangram";
-import createLetters from "../helpers/createLetters";
+import createLetters, { currentDate } from "../helpers/createLetters";
 import Ranking from "./Ranking";
+import pangramData from "../data/pangrams";
+import Papa from "papaparse";
 
 const Main = (props) => {
   const [letters, setLetters] = useState([]);
@@ -13,16 +15,33 @@ const Main = (props) => {
   const [guess, setGuess] = useState("");
   const [showAnswers, setShowAnswers] = useState(false);
   const [inputMessage, setInputMessage] = useState("");
-  const startGame = () => {
-    const [l, w] = createLetters();
-    setGuess("");
-    setAnswers([]);
-    setLetters(l);
-    setWords(w);
-    setPoints(0);
-    setShowAnswers(false);
-    setMaxPoints(w.reduce((acc, cur) => acc + countPoints(cur), 0));
-  };
+  const [pangram, setPangram] = useState([]);
+
+  useEffect(() => {
+    Papa.parse(
+      "https://docs.google.com/spreadsheets/d/1TyzfBf1CXMc079cB2L7peuBOpVroQA-OxAgBjLjKbso/pub?output=csv",
+      {
+        download: true,
+        header: true,
+        complete: (results) => {
+          console.log("PAPA", results.data);
+          let pan = Array.from(results.data).find(
+            (p) => p.date === currentDate()
+          ).pangram;
+          setPangram(pan);
+          const [l, w] = createLetters(pan);
+          setLetters(l);
+          setWords(w);
+          setMaxPoints(w.reduce((acc, cur) => acc + countPoints(cur), 0));
+        },
+      }
+    );
+
+    //Runs on every render if ends with });
+    //Runs only on the first render if ends with }, []);
+    //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
+  }, []);
+
   const addLetterToGuess = (letter) => () => {
     setGuess((prevLetters) => prevLetters.concat(letter));
   };
@@ -84,18 +103,10 @@ const Main = (props) => {
     <main>
       <section>
         {letters.length === 0 ? (
-          <button onClick={startGame}>Aloita peli</button>
-        ) : (
-          <button onClick={startGame}>Arvo uudet kirjaimet</button>
-        )}
-      </section>
-
-      <section>
-        {letters.length === 0 ? (
           <></>
         ) : (
           <section className="stats">
-            <Ranking maxPoints={maxPoints} />
+            <Ranking maxPoints={maxPoints} points={points} />
             <section className="foundWords">
               <h2>Olet löytänyt {answers.length} sanaa:</h2>
               <p>

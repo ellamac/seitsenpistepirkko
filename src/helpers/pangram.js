@@ -1,7 +1,7 @@
-import { pangrams } from "../data/pangrams";
+import { pangramData } from "../data/pangrams.js";
 
 export const isPangram = (word) => {
-  return pangrams.includes(word);
+  return pangramData.includes(word);
 };
 
 export const countPoints = (word) => {
