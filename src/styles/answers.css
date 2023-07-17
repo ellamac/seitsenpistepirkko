@@ -1,0 +1,31 @@
+.answers-main {
+  margin: 1em 0;
+  width: 100%;
+}
+.answers-main h2 {
+  margin: 1em 0 0.5em;
+  font-size: 1.5em;
+}
+.answers .words {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.answers .words p {
+  flex: 0 0 25%;
+  padding: 0;
+  margin: 0;
+}
+
+.answers .words p.found {
+  color: rgb(35, 217, 15);
+}
+.answers .words p.notfound {
+  color: rgb(226, 24, 24);
+}
+
+.answers .words p.isPangram {
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -1,0 +1,22 @@
+.foundWords {
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 0.5vh;
+  box-shadow: 0 0 0.5vh grey;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  height: 10em;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.foundWords p {
+  padding: 0;
+  margin: 0.1em 0;
+  width: 20%;
+}
+
+.foundWords p.isPangram {
+  text-transform: uppercase;
+  font-weight: 600;
+}
