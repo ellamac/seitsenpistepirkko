@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Hive from "./Hive";
-import { shuffleLetters } from "../helpers/pangram";
+import { shuffleLetters } from "../helpers/words";
 const Game = ({
   correctGuesses,
   setCorrectGuesses,
@@ -15,7 +15,7 @@ const Game = ({
 
   useEffect(() => {
     setlettersOnLadyBug(letters);
-  }, []);
+  }, [letters]);
 
   const addLetterToGuess = (letter) => () => {
     setGuess((prevLetters) => prevLetters.concat(letter));

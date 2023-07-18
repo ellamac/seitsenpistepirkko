@@ -1,28 +1,77 @@
 section.ranking button {
-  padding: 0;
   margin: 0;
-
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
 }
 
-section.ranking button section.steps {
+section.ranking button.steps {
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
-  align-items: center;
-  align-content: stretch;
+  padding: 1em;
 }
 
-section.ranking button section.steps p {
-  display: none;
-}
-section.ranking .steps p.current {
+section.ranking button.steps p {
   margin: 0;
-  padding: 0.5em 0.8em;
+  padding: 0.8em 0.8em;
+  display: initial;
+  border-radius: 2em;
+  color: black;
+  background-color: white;
+}
+
+section.ranking button.steps p.points {
+  padding: 0.5em 0.2em;
+  font-weight: 900;
+}
+
+section.ranking button.steps section.ranks p.rank {
+  padding: 0.4em 0.25em 0.1em;
+  flex: 0 0 1.5em;
+  height: 1.5em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+section.ranking button.steps section.ranks p.current {
   display: initial;
   background-color: rgb(160, 39, 62);
   color: white;
-  border-radius: 1em;
+}
+
+section.ranking button.steps section.ranks {
+  display: flex;
+  width: 100%;
+}
+
+/* suljettu */
+section.ranking button.steps.hidden {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.ranking button.steps.hidden section.ranks {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.ranking button.steps.hidden section.ranks p span.extra {
+  display: none;
+}
+
+/* avattu */
+section.ranking button.steps.visible {
+  flex-flow: column nowrap;
+}
+section.ranking button.steps.visible section.ranks {
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+section.ranking button.steps.visible section.ranks p {
+  flex: 1 1 auto;
+  padding: 0.5em 1em;
+  height: auto;
+}
+section.ranking button.steps.visible section.ranks p span.extra {
+  display: initial;
 }

@@ -1,12 +1,30 @@
+import { isPangram } from "./words";
+
+export const steps = [
+  { limit: 0, name: "Kokeilija vielä" },
+  { limit: 0.02, name: "Ihan ookoo" },
+  { limit: 0.05, name: "Right on!" },
+  { limit: 0.08, name: "Peli vasta alkaa!" },
+  { limit: 0.15, name: "Perin mahtavaa" },
+  { limit: 0.25, name: "Uskomatonta" },
+  { limit: 0.4, name: "Petoainesta" },
+  { limit: 0.5, name: "Erittäin hyvä" },
+  { limit: 0.7, name: "Tajunnanräjäyttävää!" },
+  { limit: 1.0, name: "Oikea kirppupeto! Löysit kaikki sanat!" },
+];
+
 export const getRanking = (points, maxPoints) => {
-  if (points >= maxPoints) return "Kaikki sanat löydetty!!";
-  if (points >= maxPoints * 0.7) return "Nerokasta!";
-  if (points >= maxPoints * 0.5) return "Ällistyttävää!";
-  if (points >= maxPoints * 0.4) return "Mahtavaa!";
-  if (points >= maxPoints * 0.25) return "Nais!";
-  if (points >= maxPoints * 0.15) return "Vankka pohja";
-  if (points >= maxPoints * 0.08) return "Hyvä!";
-  if (points >= maxPoints * 0.05) return "Etenee!";
-  if (points >= maxPoints * 0.02) return "Hyvä alku!";
-  if (points >= 0) return "Aloittelija vielä!";
+  return steps.find((s) => points >= Math.floor(maxPoints * s.limit)).name;
+};
+
+export const countPoints = (word) => {
+  let len = word.length;
+  let isPan = isPangram(word);
+  if (len < 5) {
+    return 1;
+  } else if (isPan) {
+    return len + 7;
+  } else {
+    return len;
+  }
 };

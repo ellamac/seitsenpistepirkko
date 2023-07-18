@@ -1,15 +1,13 @@
 html {
-  scrollbar-gutter: stable both-edges;
   width: 100vw;
   height: 100vh;
 }
 
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
   font-size: 1.5vh;
   margin: 2vh 4vw;
-  width: 96vh 92vw;
+  width: 92vw;
+  height: 96vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -37,10 +35,11 @@ h2 {
 }
 
 button {
+  color: black !important;
   background-color: white;
-  border: 0;
-  box-shadow: 0 0 0.2em grey;
-  border-radius: 0.2em;
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5em;
   padding: 0.5em 0.8em;
   margin: 0.5em 0;
 }
@@ -52,19 +51,19 @@ button {
   height: 1.5em;
 }
 
-.guess {
+.guessText {
   height: 2em;
   font-weight: 700;
   font-size: 1.5em;
 }
 
-.guess p {
+.guessText p {
   margin: 0;
   padding: 0;
 }
 
-main {
+.app > main {
   display: flex;
   flex-flow: column nowrap;
-  gap: 2em;
+  gap: 1em;
 }

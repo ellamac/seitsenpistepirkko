@@ -7,22 +7,26 @@
   font-size: 1.5em;
 }
 .answers .words {
-  width: 100%;
+  padding: 0.5em;
+  max-height: 13em;
+  overflow-x: scroll;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
 }
 
 .answers .words p {
-  flex: 0 0 25%;
+  width: calc(100% / 3.5);
   padding: 0;
-  margin: 0;
+  margin: 0 0.5em;
+  hyphens: auto;
 }
 
 .answers .words p.found {
-  color: rgb(35, 217, 15);
+  color: rgb(73, 160, 63);
+  font-weight: 600;
 }
 .answers .words p.notfound {
-  color: rgb(226, 24, 24);
+  color: rgb(0, 0, 0);
 }
 
 .answers .words p.isPangram {

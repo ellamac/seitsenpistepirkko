@@ -11,9 +11,9 @@ const Hive = ({ letters, onLetterClick }) => {
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
   }, [letters]);
   return (
-    <div>
+    <section className="ladybug">
       <Ladybug letters={lets} onClick={onLetterClick} />
-    </div>
+    </section>
   );
 };
 

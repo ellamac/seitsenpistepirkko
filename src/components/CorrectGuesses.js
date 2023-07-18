@@ -1,22 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { getRanking } from "../helpers/points";
-import { isPangram } from "../helpers/pangram";
+import { isPangram } from "../helpers/words";
 const CorrectGuesses = ({ correctGuesses, points, maxPoints }) => {
+  const [show, setShow] = useState(false);
   return (
-    <section className="foundWords">
-      <heaeder>
-        <h2>Olet löytänyt {correctGuesses.length} sanaa:</h2>
-        <p>
-          Pisteitä: {points} ({getRanking(points, maxPoints)})
-        </p>
-      </heaeder>
-      <main>
-        {correctGuesses.map((a, i) => (
-          <p className={isPangram(a) ? "isPangram" : "notPangram"} key={a + i}>
-            {a}
-          </p>
-        ))}
-      </main>
+    <section className="correctGuesses">
+      <button
+        type="button"
+        onClick={() => setShow((prev) => !prev)}
+        className={show ? "visible" : "hidden"}
+      >
+        <header>
+          <h2>
+            Olet löytänyt {correctGuesses.length}{" "}
+            {correctGuesses.length === 1 ? "sanan" : "sanaa"}
+          </h2>
+        </header>
+        <main>
+          {correctGuesses.map((a, i) => (
+            <p
+              className={isPangram(a) ? "isPangram" : "notPangram"}
+              key={a + i}
+            >
+              {" "}
+              {a}
+            </p>
+          ))}
+        </main>
+      </button>
     </section>
   );
 };

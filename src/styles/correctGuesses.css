@@ -1,0 +1,62 @@
+section.correctGuesses button {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+}
+section.correctGuesses button main {
+  display: flex;
+}
+
+section.correctGuesses p {
+  padding: 0;
+  margin: 0.1em 0;
+}
+
+.correctGuesses p.isPangram {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*suljettu*/
+section.correctGuesses button.hidden {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section.correctGuesses button.hidden header {
+  text-align: left;
+}
+section.correctGuesses button.hidden main {
+  flex-flow: row nowrap;
+  overflow-x: hidden;
+}
+section.correctGuesses button.hidden main p {
+  width: calc(100% / 5);
+  margin-right: 0.5em;
+  text-align: left;
+}
+
+/*avattu*/
+section.correctGuesses button.visible {
+  flex-flow: column wrap;
+}
+section.correctGuesses button.visible header {
+  flex: 0 0 100%;
+}
+section.correctGuesses button.visible main {
+  width: 100%;
+  max-height: 14em;
+  flex: 1 1 auto;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow-x: scroll;
+}
+
+section.correctGuesses button.visible main p {
+  width: calc(100% / 3);
+  text-align: left;
+}

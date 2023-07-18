@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { countPoints } from "../helpers/pangram";
+import { countPoints } from "../helpers/points";
 import createLetters, { currentDate } from "../helpers/createLetters";
 import Ranking from "./Ranking";
 import Papa from "papaparse";

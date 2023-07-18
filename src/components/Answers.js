@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { isPangram } from "../helpers/pangram";
+import React, { useState } from "react";
+import { isPangram } from "../helpers/words";
 
 const Answers = ({ letters, answers, correctGuesses }) => {
   const [showAnswers, setShowAnswers] = useState(false);
