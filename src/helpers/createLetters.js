@@ -1,5 +1,5 @@
 import { sanaObjects } from "../data/newData.js";
-import randomPans from "../data/randomPans.js";
+import { shuffleLetters } from "./pangram.js";
 
 const allWords = sanaObjects;
 
@@ -22,12 +22,7 @@ export const createAnswerList = (pangram) => {
 
   /*list all the unique letters of the pangram and shuffle the list */
   letters = [...new Set(pangram.replace(/-|’/g, "").split(""))];
-  for (let i = letters.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = letters[i];
-    letters[i] = letters[j];
-    letters[j] = temp;
-  }
+  letters = shuffleLetters(letters);
 
   /*make a list of all the words that can be made up from the pangram's letters */
   let usableWords = [];

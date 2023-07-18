@@ -23,19 +23,18 @@ const Ranking = ({ maxPoints, points }) => {
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
   }, [maxPoints]);
 
-  const pointSteps = (step) => {
-    return (
-      <p className={points >= maxPoints * step.limit ? "current" : ""}>
-        {step.name}
-      </p>
-    );
-  };
   return (
     <section className="ranking">
       <button type="button" onClick={() => setHidden((prev) => !prev)}>
-        <div className="steps">{steps.map((s) => pointSteps(s))}</div>
+        <section className="steps">
+          {steps.map((s) => (
+            <p className={points >= maxPoints * s.limit ? "current" : ""}>
+              {s.name}
+            </p>
+          ))}
+        </section>
         {!hidden ? (
-          <div>
+          <section>
             <p>Maksimipisteet: {max} p</p>
             <p>Nerokasta: {Math.floor(max * 0.7)} p</p>
             <p>Ällistyttävä: {Math.floor(max * 0.5)} p</p>
@@ -46,7 +45,7 @@ const Ranking = ({ maxPoints, points }) => {
             <p>Etenee: {Math.floor(max * 0.05)} p</p>
             <p>Hyvä alku: {Math.floor(max * 0.02)} p</p>
             <p>Alottelija: 0 p</p>
-          </div>
+          </section>
         ) : (
           <></>
         )}

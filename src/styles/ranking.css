@@ -1,33 +1,28 @@
-section.ranking {
-  border-radius: 1em;
-  padding: 1em;
-}
-
-section.ranking .steps {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-section.ranking .steps p {
-  padding: 0.5em;
-  border-radius: 1em;
-  font-weight: 900;
-  background-color: transparent;
-  color: black;
-}
-section.ranking .steps p.current {
-  background-color: rgb(160, 39, 62);
-  color: white;
-  padding: 0.5em;
-  border-radius: 1em;
-}
 section.ranking button {
+  padding: 0;
+  margin: 0;
+
   background-color: transparent;
   border: none;
   box-shadow: none;
-  width: 100%;
-  padding: 0;
+}
+
+section.ranking button section.steps {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+  align-content: stretch;
+}
+
+section.ranking button section.steps p {
+  display: none;
+}
+section.ranking .steps p.current {
   margin: 0;
-  height: 100%;
+  padding: 0.5em 0.8em;
+  display: initial;
+  background-color: rgb(160, 39, 62);
+  color: white;
+  border-radius: 1em;
 }
