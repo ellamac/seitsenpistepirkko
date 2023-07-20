@@ -18,6 +18,7 @@ const Game = ({
   }, [letters]);
 
   const addLetterToGuess = (letter) => () => {
+    setInputMessage("");
     setGuess((prevLetters) => prevLetters.concat(letter));
   };
   const checkGuess = () => {
@@ -40,12 +41,11 @@ const Game = ({
     } else {
       message = "ei oo sanalistassa";
     }
-
+    clearGuess();
     setInputMessage(message);
     setTimeout(() => {
       setInputMessage("");
-      clearGuess();
-    }, "1000");
+    }, "3000");
   };
   const clearGuess = () => {
     setGuess("");
@@ -60,8 +60,9 @@ const Game = ({
       <Hive letters={lettersOnLadyBug} onLetterClick={addLetterToGuess} />
       <section className="actionButtons">
         <p className="message">{inputMessage}</p>
-        <button type="button" onClick={checkGuess}>
-          Vastaa
+
+        <button type="button" onClick={backspace}>
+          Kumita
         </button>
         <button
           type="button"
@@ -69,11 +70,8 @@ const Game = ({
         >
           Sekoita
         </button>
-        <button type="button" onClick={backspace}>
-          Poista
-        </button>
-        <button type="button" onClick={clearGuess}>
-          Tyhjennä
+        <button type="button" onClick={checkGuess}>
+          Vastaa
         </button>
       </section>
     </section>

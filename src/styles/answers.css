@@ -3,11 +3,13 @@
   width: 100%;
 }
 .answers-main h2 {
-  margin: 1em 0 0.5em;
   font-size: 1.5em;
 }
+.answers-main header button {
+  margin: 1em 0;
+}
 .answers .words {
-  padding: 0.5em;
+  padding: 0 0 1em;
   max-height: 13em;
   overflow-x: scroll;
   display: flex;
@@ -17,7 +19,7 @@
 .answers .words p {
   width: calc(100% / 3.5);
   padding: 0;
-  margin: 0 0.5em;
+  margin: 0;
   hyphens: auto;
 }
 

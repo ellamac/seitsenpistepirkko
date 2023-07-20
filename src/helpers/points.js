@@ -23,8 +23,8 @@ export const countPoints = (word) => {
   if (len < 5) {
     return 1;
   } else if (isPan) {
-    return len + 7;
+    return len - 3 + 7;
   } else {
-    return len;
+    return len - 3;
   }
 };

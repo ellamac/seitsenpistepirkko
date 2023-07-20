@@ -3,16 +3,15 @@ import { shuffleLetters } from "./words.js";
 
 const allWords = sanaObjects;
 
-export const currentDate = () => {
+export const currentDate = (n) => {
   const date = new Date();
 
-  let currentDay = String(date.getDate()).padStart(2, "0");
+  let currentDay = String(date.getDate() - n).padStart(2, "0");
   let currentMonth = String(date.getMonth() + 1).padStart(2, "0");
   let currentYear = date.getFullYear();
   // we will display the date as YYYY-MM-DD
   let currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 
-  console.log("The current date is " + currentDate);
   return currentDate;
 };
 

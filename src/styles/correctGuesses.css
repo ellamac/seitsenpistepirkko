@@ -1,4 +1,5 @@
 section.correctGuesses button {
+  margin: 0;
   padding: 1em;
   width: 100%;
   display: flex;
@@ -27,13 +28,15 @@ section.correctGuesses button.hidden {
 
 section.correctGuesses button.hidden header {
   text-align: left;
+  overflow: visible;
+  white-space: nowrap;
 }
 section.correctGuesses button.hidden main {
   flex-flow: row nowrap;
   overflow-x: hidden;
+  justify-content: flex-start;
 }
 section.correctGuesses button.hidden main p {
-  width: calc(100% / 5);
   margin-right: 0.5em;
   text-align: left;
 }

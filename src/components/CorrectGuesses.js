@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getRanking } from "../helpers/points";
 import { isPangram } from "../helpers/words";
-const CorrectGuesses = ({ correctGuesses, points, maxPoints }) => {
+const CorrectGuesses = ({ maxWords, correctGuesses }) => {
   const [show, setShow] = useState(false);
   return (
     <section className="correctGuesses">
@@ -12,8 +12,8 @@ const CorrectGuesses = ({ correctGuesses, points, maxPoints }) => {
       >
         <header>
           <h2>
-            Olet löytänyt {correctGuesses.length}{" "}
-            {correctGuesses.length === 1 ? "sanan" : "sanaa"}
+            Olet löytänyt {correctGuesses.length} / {maxWords} sanaa
+            {}
           </h2>
         </header>
         <main>

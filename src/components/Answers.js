@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { isPangram } from "../helpers/words";
 
-const Answers = ({ letters, answers, correctGuesses }) => {
+const Answers = ({ letters, answers }) => {
   const [showAnswers, setShowAnswers] = useState(false);
 
   return (
     <section className="answers-main">
       <header>
-        <h2>Vastaukset</h2>
+        <h2>Eilisen vastaukset</h2>
         <button
           type="button"
           onClick={() => setShowAnswers((prevState) => !prevState)}
@@ -22,19 +22,14 @@ const Answers = ({ letters, answers, correctGuesses }) => {
             {letters.length > 0 ? letters.map((l) => l + " ") : "...loading"}
           </p>
           <p className="info">
-            Kirjaimista muodostuu {answers.length} suomenkielistä sanaa:
+            Kirjaimista muodostui {answers.length} suomenkielistä sanaa:
           </p>
           <section className="words">
             {answers.length > 0
               ? answers.sort().map((w, i) => (
                   <p
                     key={w + i}
-                    className={`${
-                      correctGuesses.includes(w) ||
-                      correctGuesses.includes(w.toLowerCase)
-                        ? "found"
-                        : "notfound"
-                    } ${isPangram(w) ? "isPangram" : "notPangram"}`}
+                    className={`${isPangram(w) ? "isPangram" : "notPangram"}`}
                   >
                     {w}
                   </p>

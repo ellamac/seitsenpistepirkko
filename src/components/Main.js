@@ -10,6 +10,8 @@ import Answers from "./Answers";
 const Main = (props) => {
   const [letters, setLetters] = useState([]);
   const [answers, setAnswers] = useState([]);
+  const [yesterdaysAnswers, setYesterdaysAnswers] = useState([]);
+  const [yesterdaysLetters, setYesterdaysLetters] = useState([]);
   const [correctGuesses, setCorrectGuesses] = useState([]);
   const [points, setPoints] = useState(0);
   const [maxPoints, setMaxPoints] = useState(0);
@@ -22,13 +24,18 @@ const Main = (props) => {
         download: true,
         header: true,
         complete: (results) => {
-          console.log("PAPA", results.data);
-          let pan = Array.from(results.data).find(
-            (p) => p.date === currentDate()
+          let todaysPan = Array.from(results.data).find(
+            (p) => p.date === currentDate(0)
           ).pangram;
-          const [l, w] = createLetters(pan);
+          let yesterdaysPan = Array.from(results.data).find(
+            (p) => p.date === currentDate(1)
+          ).pangram;
+          const [l, w] = createLetters(todaysPan);
+          const [yl, yw] = createLetters(yesterdaysPan);
           setLetters(l);
           setAnswers(w);
+          setYesterdaysAnswers(yw);
+          setYesterdaysLetters(yl);
           setMaxPoints(w.reduce((acc, cur) => acc + countPoints(cur), 0));
           setSimpleWords(w.map((w) => w.replace(/-|’/g, "")));
         },
@@ -46,8 +53,7 @@ const Main = (props) => {
     <main>
       <Ranking maxPoints={maxPoints} points={points} />
       <CorrectGuesses
-        points={points}
-        maxPoints={maxPoints}
+        maxWords={simpleWords.length}
         correctGuesses={correctGuesses}
       />
       <Game
@@ -58,11 +64,7 @@ const Main = (props) => {
         countPoints={countPoints}
         letters={letters}
       />
-      <Answers
-        letters={letters}
-        answers={answers}
-        correctGuesses={correctGuesses}
-      />
+      <Answers letters={yesterdaysLetters} answers={yesterdaysAnswers} />
     </main>
   );
 };

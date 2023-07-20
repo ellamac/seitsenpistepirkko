@@ -21,8 +21,9 @@ const Ranking = ({ maxPoints, points }) => {
           {points} {points.length === 1 ? "piste" : "pistettä"}
         </p>
         <section className="ranks">
-          {steps.map((s) => (
+          {steps.map((s, i) => (
             <p
+              key={s + i}
               className={`rank ${
                 points >= maxPoints * s.limit ? "current" : ""
               }`}
