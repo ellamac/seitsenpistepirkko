@@ -107,15 +107,32 @@ footer.mainFooter p {
   padding: 0;
 }
 
+.game .message {
+  position: absolute;
+  background-color: rgba(187, 63, 14, 1);
+  color: white;
+  font-weight: 900;
+  padding: 1em 2em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5em;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 1.5em;
+}
+
 svg text {
   pointer-events: none;
 }
 svg.ladybug {
-  max-height: 60vh;
-  max-width: 70vw;
+  max-height: 45vh;
+  max-width: 90vw;
 }
 svg.ladybug > * {
   font-weight: 700;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 svg.ladybug .expression.visible {
@@ -123,4 +140,9 @@ svg.ladybug .expression.visible {
 }
 svg.ladybug .expression.hidden {
   display: none;
+}
+
+svg.ladybug .button:active {
+  background-color: transparent;
+  all: unset;
 }

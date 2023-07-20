@@ -64,7 +64,9 @@ const Game = ({
         onLetterClick={addLetterToGuess}
       />
       <section className="actionButtons">
-        <p className="message">{inputMessage}</p>
+        {inputMessage.length > 0 ? (
+          <p className="message">{inputMessage}</p>
+        ) : null}
 
         <button type="button" onClick={backspace}>
           Kumita

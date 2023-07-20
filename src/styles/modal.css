@@ -34,4 +34,5 @@ section.modal main {
 
 section.modal main button {
   width: 100%;
+  margin: 0;
 }

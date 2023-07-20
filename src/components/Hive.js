@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Ladybug from "./Ladybug2.js";
+import Ladybug from "./Ladybug.js";
 
 const Hive = ({ letters, onLetterClick, ranking }) => {
   const [lets, setLets] = useState([]);
