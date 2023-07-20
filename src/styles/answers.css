@@ -1,12 +1,12 @@
 .answers-main {
-  margin: 1em 0;
+  margin: 1em 0 0;
   width: 100%;
 }
 .answers-main h2 {
   font-size: 1.5em;
 }
 .answers-main header button {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 .answers .words {
   padding: 0 0 1em;
@@ -23,15 +23,8 @@
   hyphens: auto;
 }
 
-.answers .words p.found {
-  color: rgb(73, 160, 63);
-  font-weight: 600;
-}
-.answers .words p.notfound {
-  color: rgb(0, 0, 0);
-}
-
 .answers .words p.isPangram {
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--main-highlight-color);
 }

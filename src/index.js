@@ -4,6 +4,7 @@ import "./styles/index.css";
 import "./styles/answers.css";
 import "./styles/correctGuesses.css";
 import "./styles/ranking.css";
+import "./styles/modal.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

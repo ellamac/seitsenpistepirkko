@@ -50,7 +50,7 @@ const Main = (props) => {
   return letters.length === 0 ? (
     <></>
   ) : (
-    <main>
+    <main className="mainMain">
       <Ranking maxPoints={maxPoints} points={points} />
       <CorrectGuesses
         maxWords={simpleWords.length}

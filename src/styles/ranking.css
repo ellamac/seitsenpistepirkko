@@ -30,7 +30,7 @@ section.ranking button.steps section.ranks p.rank {
 }
 section.ranking button.steps section.ranks p.current {
   display: initial;
-  background-color: rgb(160, 39, 62);
+  background-color: var(--main-highlight-color);
   color: white;
 }
 
