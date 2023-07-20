@@ -8,6 +8,7 @@ const Game = ({
   setPoints,
   countPoints,
   letters,
+  ranking,
 }) => {
   const [inputMessage, setInputMessage] = useState("");
   const [guess, setGuess] = useState("");
@@ -57,7 +58,11 @@ const Game = ({
   return (
     <section className="game">
       <p className="guessText">{guess}</p>
-      <Hive letters={lettersOnLadyBug} onLetterClick={addLetterToGuess} />
+      <Hive
+        letters={lettersOnLadyBug}
+        ranking={ranking}
+        onLetterClick={addLetterToGuess}
+      />
       <section className="actionButtons">
         <p className="message">{inputMessage}</p>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Ladybug from "./Ladybug.js";
+import Ladybug from "./Ladybug2.js";
 
-const Hive = ({ letters, onLetterClick }) => {
+const Hive = ({ letters, onLetterClick, ranking }) => {
   const [lets, setLets] = useState([]);
   const bigLetters = (ls) => ls.map((l) => (l ? l.toUpperCase() : l));
   useEffect(() => {
@@ -12,7 +12,7 @@ const Hive = ({ letters, onLetterClick }) => {
   }, [letters]);
   return (
     <section className="ladybug">
-      <Ladybug letters={lets} onClick={onLetterClick} />
+      <Ladybug letters={lets} ranking={ranking} onClick={onLetterClick} />
     </section>
   );
 };

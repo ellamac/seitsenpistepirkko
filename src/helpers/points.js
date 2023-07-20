@@ -14,7 +14,7 @@ export const steps = [
 ];
 
 export const getRanking = (points, maxPoints) => {
-  return steps.find((s) => points >= Math.floor(maxPoints * s.limit)).name;
+  return steps.find((s) => points <= Math.floor(maxPoints * s.limit));
 };
 
 export const countPoints = (word) => {

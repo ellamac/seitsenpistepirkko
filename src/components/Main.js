@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { countPoints } from "../helpers/points";
+import { countPoints, getRanking } from "../helpers/points";
 import createLetters, { currentDate } from "../helpers/createLetters";
 import Ranking from "./Ranking";
 import Papa from "papaparse";
@@ -16,6 +16,7 @@ const Main = (props) => {
   const [points, setPoints] = useState(0);
   const [maxPoints, setMaxPoints] = useState(0);
   const [simpleWords, setSimpleWords] = useState([]); /*words without - an '*/
+  const [ranking, setRanking] = useState({ limit: 0, name: "Kokeilija vielä" });
 
   useEffect(() => {
     Papa.parse(
@@ -47,11 +48,18 @@ const Main = (props) => {
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
   }, []);
 
+  useEffect(() => {
+    setRanking(getRanking(points, maxPoints));
+    console.log("rank,", getRanking(points, maxPoints));
+    //Runs on every render if ends with });
+    //Runs only on the first render if ends with }, []);
+    //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
+  }, [points, maxPoints]);
   return letters.length === 0 ? (
     <></>
   ) : (
     <main className="mainMain">
-      <Ranking maxPoints={maxPoints} points={points} />
+      <Ranking points={points} maxPoints={maxPoints} />
       <CorrectGuesses
         maxWords={simpleWords.length}
         correctGuesses={correctGuesses}
@@ -63,6 +71,7 @@ const Main = (props) => {
         setPoints={setPoints}
         countPoints={countPoints}
         letters={letters}
+        ranking={ranking}
       />
       <Answers letters={yesterdaysLetters} answers={yesterdaysAnswers} />
     </main>

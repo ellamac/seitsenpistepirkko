@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { getRanking } from "../helpers/points";
 import { isPangram } from "../helpers/words";
 const CorrectGuesses = ({ maxWords, correctGuesses }) => {
   const [show, setShow] = useState(false);
