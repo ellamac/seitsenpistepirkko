@@ -58,11 +58,11 @@ const Main = (props) => {
 
   const getText = () => {
     let emoji1 = "🔴";
-    let rank = steps.indexOf(ranking) + 1;
+    let rank = steps.indexOf(ranking);
     let extra = rank === 7 ? "🐞" : "";
-    return `${emoji1.repeat(rank)}${extra}%0D%0A7PP ${currentDate(
-      0
-    )}%0D%0ALöysin ${
+    return `${
+      rank === 0 ? "⁉️" : emoji1.repeat(rank)
+    }${extra}%0D%0A7PP ${currentDate(0)}%0D%0ALöysin ${
       correctGuesses.length
     } sanaa ja%0D%0Asain ${points} pistettä.%0D%0Ahttps://ellamac.github.io/seitsenpistepirkko/`;
   };
