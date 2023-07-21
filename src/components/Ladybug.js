@@ -110,6 +110,7 @@ const SvgComponent = (props) => {
         }}
       />
       <ellipse
+        className="redBody"
         cx={169.5}
         cy={290.1}
         rx={162.9}

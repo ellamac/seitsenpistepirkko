@@ -1,9 +1,6 @@
 *,
 *:focus {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html,
 body {
@@ -22,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --main-highlight-color: #bb3f0e;
+  --main-highlight-color: color(display-p3 0.87 0.29 0);
 }
 .app {
   box-sizing: border-box;
@@ -56,6 +53,7 @@ button {
   padding: 0.5em 0.8em;
   margin: 0.5em 0;
 }
+
 main.mainMain {
   display: flex;
   flex-flow: column nowrap;
@@ -123,7 +121,7 @@ footer.mainFooter p {
 
 .game .message {
   position: absolute;
-  background-color: rgba(187, 63, 14, 1);
+  background-color: color(display-p3 0.79 0.26 0.04);
   color: white;
   font-weight: 900;
   padding: 1em 2em;
@@ -142,6 +140,9 @@ svg.ladybug {
   max-height: 45vh;
   max-width: 90vw;
 }
+svg.ladybug .redBody {
+  fill: var(--main-highlight-color) !important;
+}
 svg.ladybug > * {
   font-weight: 700;
   -webkit-user-select: none; /* Safari */
@@ -154,8 +155,4 @@ svg.ladybug .expression.visible {
 }
 svg.ladybug .expression.hidden {
   display: none;
-}
-
-svg.ladybug .button:active {
-  background-color: transparent;
 }
