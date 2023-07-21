@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { isPangram } from "../helpers/words";
-const CorrectGuesses = ({ maxWords, correctGuesses }) => {
+const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
   const [show, setShow] = useState(false);
   return (
     <section className="correctGuesses">
@@ -12,7 +12,6 @@ const CorrectGuesses = ({ maxWords, correctGuesses }) => {
         <header>
           <h2>
             Olet löytänyt {correctGuesses.length} / {maxWords} sanaa
-            {}
           </h2>
         </header>
         <main>
@@ -26,6 +25,7 @@ const CorrectGuesses = ({ maxWords, correctGuesses }) => {
             </p>
           ))}
         </main>
+        <a href={`whatsapp://send?text=${text}`}>Jaa tulokset Whatsappissa!</a>
       </button>
     </section>
   );

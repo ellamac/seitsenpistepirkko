@@ -19,6 +19,11 @@ section.correctGuesses p {
   font-weight: 600;
 }
 
+section.correctGuesses button a {
+  display: initial;
+  color: var(--main-highlight-color);
+}
+
 /*suljettu*/
 section.correctGuesses button.hidden {
   flex-flow: row nowrap;
@@ -39,6 +44,9 @@ section.correctGuesses button.hidden main {
 section.correctGuesses button.hidden main p {
   margin-right: 0.5em;
   text-align: left;
+}
+section.correctGuesses button.hidden a {
+  display: none;
 }
 
 /*avattu*/
@@ -62,4 +70,7 @@ section.correctGuesses button.visible main {
 section.correctGuesses button.visible main p {
   width: calc(100% / 3);
   text-align: left;
+}
+section.correctGuesses button.visible a {
+  display: initial;
 }

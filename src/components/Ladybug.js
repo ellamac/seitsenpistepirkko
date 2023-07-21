@@ -36,7 +36,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0 || props.ranking.limit === 0.02
+          props.ranking.limit === 0 || props.ranking.limit === 0.05
             ? "expression visible"
             : "expression hidden"
         }
@@ -51,7 +51,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0.05 || props.ranking.limit === 0.08
+          props.ranking.limit === 0.15
             ? "expression visible"
             : "expression hidden"
         }
@@ -66,7 +66,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0.15 || props.ranking.limit === 0.25
+          props.ranking.limit === 0.35
             ? "expression visible"
             : "expression hidden"
         }
@@ -81,7 +81,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0.4 || props.ranking.limit === 0.5
+          props.ranking.limit === 0.5
             ? "expression visible"
             : "expression hidden"
         }
@@ -96,7 +96,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0.7 || props.ranking.limit === 1.0
+          props.ranking.limit === 0.7
             ? "expression visible"
             : "expression hidden"
         }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { countPoints, getRanking } from "../helpers/points";
+import { countPoints, getRanking, steps } from "../helpers/points";
 import createLetters, { currentDate } from "../helpers/createLetters";
 import Ranking from "./Ranking";
 import Papa from "papaparse";
@@ -55,6 +55,17 @@ const Main = (props) => {
     //Runs only on the first render if ends with }, []);
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
   }, [points, maxPoints]);
+
+  const getText = () => {
+    let emoji1 = "🔴";
+    let rank = steps.indexOf(ranking) + 1;
+    let extra = rank === 7 ? "🐞" : "";
+    return `${emoji1.repeat(rank)}${extra}%0D%0A7PP ${currentDate(
+      0
+    )}%0D%0ALöysin ${
+      correctGuesses.length
+    } sanaa ja%0D%0Asain ${points} pistettä`;
+  };
   return letters.length === 0 ? (
     <></>
   ) : (
@@ -63,6 +74,7 @@ const Main = (props) => {
       <CorrectGuesses
         maxWords={simpleWords.length}
         correctGuesses={correctGuesses}
+        text={getText()}
       />
       <Game
         correctGuesses={correctGuesses}

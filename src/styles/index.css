@@ -55,11 +55,18 @@ main.mainMain {
   gap: 1em;
 }
 
+@media (orientation: landscape) {
+  main.mainMain {
+    padding: 1.5em 25vmin;
+  }
+}
+
 header.mainHeader {
   background-color: var(--main-highlight-color);
 }
 header.mainHeader section.headerText {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 header.mainHeader section.headerText h1 {
