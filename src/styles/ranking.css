@@ -51,6 +51,9 @@ section.ranking button.steps.hidden section.ranks {
   justify-content: space-between;
   align-items: center;
 }
+section.ranking button.steps.hidden section.ranks p.rank:last-of-type {
+  display: none;
+}
 
 section.ranking button.steps.hidden section.ranks p span.extra {
   display: none;
