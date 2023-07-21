@@ -6,7 +6,12 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+body *:active,
+body *:focus,
+body *:hover {
+  background-color: transparent;
+  all: unset;
+}
 body {
   font-size: 1.5vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -149,7 +154,9 @@ svg.ladybug .expression.hidden {
   display: none;
 }
 
-svg.ladybug .button:active {
+svg.ladybug .button:active,
+svg.ladybug .button:focus,
+svg.ladybug .button:hover {
   background-color: transparent;
   all: unset;
 }

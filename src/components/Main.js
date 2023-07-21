@@ -64,7 +64,7 @@ const Main = (props) => {
       0
     )}%0D%0ALöysin ${
       correctGuesses.length
-    } sanaa ja%0D%0Asain ${points} pistettä`;
+    } sanaa ja%0D%0Asain ${points} pistettä.%0D%0Ahttps://ellamac.github.io/seitsenpistepirkko/`;
   };
   return letters.length === 0 ? (
     <></>
