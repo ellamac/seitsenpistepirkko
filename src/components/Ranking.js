@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { steps } from "../helpers/points";
-const Ranking = ({ maxPoints, points }) => {
+const Ranking = ({ maxPoints, points, ranking }) => {
   const [hidden, setHidden] = useState(true);
   useEffect(() => {
     setHidden(true);
@@ -23,9 +23,7 @@ const Ranking = ({ maxPoints, points }) => {
           {steps.map((s, i) => (
             <p
               key={s + i}
-              className={`rank ${
-                points >= maxPoints * s.limit ? "current" : ""
-              }`}
+              className={`rank ${ranking.limit >= s.limit ? "current" : ""}`}
             >
               {s.name.substring(0, 1)}
               <span className="extra">

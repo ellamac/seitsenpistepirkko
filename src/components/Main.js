@@ -8,15 +8,31 @@ import Game from "./Game";
 import Answers from "./Answers";
 
 const Main = (props) => {
-  const [letters, setLetters] = useState([]);
-  const [answers, setAnswers] = useState([]);
-  const [yesterdaysAnswers, setYesterdaysAnswers] = useState([]);
-  const [yesterdaysLetters, setYesterdaysLetters] = useState([]);
-  const [correctGuesses, setCorrectGuesses] = useState([]);
-  const [points, setPoints] = useState(0);
-  const [maxPoints, setMaxPoints] = useState(0);
-  const [simpleWords, setSimpleWords] = useState([]); /*words without - an '*/
-  const [ranking, setRanking] = useState({ limit: 0, name: "Kokeilija vielä" });
+  const letters = localStorage.getItem("pangram")
+    ? createLetters(localStorage.getItem("pangram"))[0]
+    : [];
+  const answers = localStorage.getItem("pangram")
+    ? createLetters(localStorage.getItem("pangram"))[1]
+    : [];
+  const yesterdaysLetters = localStorage.getItem("yesterdaysPangram")
+    ? createLetters(localStorage.getItem("yesterdaysPangram"))[0]
+    : [];
+  const yesterdaysAnswers = localStorage.getItem("yesterdaysPangram")
+    ? createLetters(localStorage.getItem("yesterdaysPangram"))[1]
+    : [];
+  const simpleWords = answers.map((a) => a.replace(/-|’/g, ""));
+  const maxPoints = simpleWords.reduce((acc, cur) => acc + countPoints(cur), 0);
+  const [correctGuesses, setCorrectGuesses] = useState(() => {
+    const saved = localStorage.getItem("correctGuesses");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+  const [points, setPoints] = useState(
+    correctGuesses.length > 0
+      ? correctGuesses.reduce((acc, cur) => acc + countPoints(cur), 0)
+      : 0
+  );
+  const [ranking, setRanking] = useState(getRanking(points, maxPoints));
 
   useEffect(() => {
     Papa.parse(
@@ -31,21 +47,11 @@ const Main = (props) => {
           let yesterdaysPan = Array.from(results.data).find(
             (p) => p.date === currentDate(1)
           ).pangram;
-          const [l, w] = createLetters(todaysPan);
-          const [yl, yw] = createLetters(yesterdaysPan);
-          setLetters(l);
-          setAnswers(w);
-          setYesterdaysAnswers(yw);
-          setYesterdaysLetters(yl);
-          setMaxPoints(w.reduce((acc, cur) => acc + countPoints(cur), 0));
-          setSimpleWords(w.map((w) => w.replace(/-|’/g, "")));
+          localStorage.setItem("pangram", todaysPan);
+          localStorage.setItem("yesterdaysPangram", yesterdaysPan);
         },
       }
     );
-    const prevGuesses = JSON.parse(localStorage.getItem("correctGuesses"));
-    if (prevGuesses && simpleWords.includes(prevGuesses[0])) {
-      setCorrectGuesses(prevGuesses);
-    }
   }, []);
 
   useEffect(() => {
@@ -58,7 +64,7 @@ const Main = (props) => {
 
   const getText = () => {
     let emoji1 = "🔴";
-    let rank = steps.indexOf(ranking);
+    let rank = steps.indexOf(ranking) + 1;
     let extra = rank === 7 ? "🐞" : "";
     return `${
       rank === 0 ? "⁉️" : emoji1.repeat(rank)
@@ -70,7 +76,7 @@ const Main = (props) => {
     <></>
   ) : (
     <main className="mainMain">
-      <Ranking points={points} maxPoints={maxPoints} />
+      <Ranking points={points} maxPoints={maxPoints} ranking={ranking} />
       <CorrectGuesses
         maxWords={simpleWords.length}
         correctGuesses={correctGuesses}

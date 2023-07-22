@@ -93,7 +93,7 @@ const SvgComponent = (props) => {
       />
       <path
         className={
-          props.ranking.limit === 0.7
+          props.ranking.limit >= 0.7
             ? "expression visible"
             : "expression hidden"
         }
