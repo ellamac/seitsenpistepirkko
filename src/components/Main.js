@@ -42,17 +42,18 @@ const Main = (props) => {
         },
       }
     );
-
-    //Runs on every render if ends with });
-    //Runs only on the first render if ends with }, []);
-    //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
+    const prevGuesses = JSON.parse(localStorage.getItem("correctGuesses"));
+    if (prevGuesses && simpleWords.includes(prevGuesses[0])) {
+      setCorrectGuesses(prevGuesses);
+    }
   }, []);
 
   useEffect(() => {
+    localStorage.setItem("correctGuesses", JSON.stringify(correctGuesses));
+  }, [correctGuesses]);
+
+  useEffect(() => {
     setRanking(getRanking(points, maxPoints));
-    //Runs on every render if ends with });
-    //Runs only on the first render if ends with }, []);
-    //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
   }, [points, maxPoints]);
 
   const getText = () => {
