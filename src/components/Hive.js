@@ -4,6 +4,7 @@ import Ladybug from "./Ladybug.js";
 const Hive = ({ letters, onLetterClick, ranking }) => {
   const [lets, setLets] = useState([]);
   const bigLetters = (ls) => ls.map((l) => (l ? l.toUpperCase() : l));
+
   useEffect(() => {
     setLets(bigLetters(letters));
     //Runs on every render if ends with });

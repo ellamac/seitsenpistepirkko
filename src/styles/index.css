@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
 }
 .app > * {
-  padding: 1.5em 1.5em;
+  padding: 1em 1em;
 }
 
 h1 {
@@ -79,7 +79,7 @@ header.mainHeader section.headerText h1 {
 }
 
 header.mainHeader button {
-  margin-left: 1em;
+  margin: 0 1em;
 }
 
 footer.mainFooter {
@@ -99,6 +99,7 @@ footer.mainFooter p {
 }
 .actionButtons button {
   margin: 0.5em;
+  padding: 1em 1.2em;
 }
 .actionButtons p {
   line-height: 1em;

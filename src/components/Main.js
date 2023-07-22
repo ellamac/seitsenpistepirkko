@@ -50,7 +50,6 @@ const Main = (props) => {
 
   useEffect(() => {
     setRanking(getRanking(points, maxPoints));
-    console.log("rank,", getRanking(points, maxPoints));
     //Runs on every render if ends with });
     //Runs only on the first render if ends with }, []);
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);

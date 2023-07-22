@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { isPangram } from "../helpers/words";
 const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
   const [show, setShow] = useState(false);
+
   return (
     <section className="correctGuesses">
       <button

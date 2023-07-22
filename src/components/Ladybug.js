@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 const SvgComponent = (props) => {
-  useEffect(() => {
-    console.log("BEE", props.ranking);
-  }, []);
   return (
     <svg
       className="ladybug"
