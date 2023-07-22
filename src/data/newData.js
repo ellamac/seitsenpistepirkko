@@ -25660,7 +25660,6 @@ export const sanaObjects = {
       "nettotuotto",
       "nettovienti",
       "neukkari",
-      "neukku",
       "neula",
       "neulanen",
       "neulata",
