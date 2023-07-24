@@ -23,7 +23,9 @@ const Ranking = ({ maxPoints, points, ranking }) => {
           {steps.map((s, i) => (
             <p
               key={s + i}
-              className={`rank ${ranking.limit >= s.limit ? "current" : ""}`}
+              className={`rank ${
+                points >= Math.floor(maxPoints * s.limit) ? "current" : ""
+              }`}
             >
               {s.name.substring(0, 1)}
               <span className="extra">

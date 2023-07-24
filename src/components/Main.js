@@ -8,20 +8,17 @@ import Game from "./Game";
 import Answers from "./Answers";
 
 const Main = (props) => {
-  const letters = localStorage.getItem("pangram")
-    ? createLetters(localStorage.getItem("pangram"))[0]
-    : [];
-  const answers = localStorage.getItem("pangram")
-    ? createLetters(localStorage.getItem("pangram"))[1]
-    : [];
-  const yesterdaysLetters = localStorage.getItem("yesterdaysPangram")
-    ? createLetters(localStorage.getItem("yesterdaysPangram"))[0]
-    : [];
-  const yesterdaysAnswers = localStorage.getItem("yesterdaysPangram")
-    ? createLetters(localStorage.getItem("yesterdaysPangram"))[1]
-    : [];
-  const simpleWords = answers.map((a) => a.replace(/-|’/g, ""));
-  const maxPoints = simpleWords.reduce((acc, cur) => acc + countPoints(cur), 0);
+  const [letters, answers] = localStorage.getItem("pangram")
+    ? createLetters(JSON.parse(localStorage.getItem("pangram")).pangram)
+    : [[], []];
+  const [yesterdaysLetters, yesterdaysAnswers] = localStorage.getItem(
+    "yesterdaysPangram"
+  )
+    ? createLetters(
+        JSON.parse(localStorage.getItem("yesterdaysPangram")).pangram
+      )
+    : [[], []];
+  const maxPoints = answers.reduce((acc, cur) => acc + countPoints(cur), 0);
   const [correctGuesses, setCorrectGuesses] = useState(() => {
     const saved = localStorage.getItem("correctGuesses");
     const initialValue = JSON.parse(saved);
@@ -41,14 +38,23 @@ const Main = (props) => {
         download: true,
         header: true,
         complete: (results) => {
-          let todaysPan = Array.from(results.data).find(
-            (p) => p.date === currentDate(0)
-          ).pangram;
-          let yesterdaysPan = Array.from(results.data).find(
+          let todaysPan = results.data.find((p) => p.date === currentDate(0));
+          let yesterdaysPan = results.data.find(
             (p) => p.date === currentDate(1)
-          ).pangram;
-          localStorage.setItem("pangram", todaysPan);
-          localStorage.setItem("yesterdaysPangram", yesterdaysPan);
+          );
+          if (
+            todaysPan.pangram !==
+            JSON.parse(localStorage.getItem("pangram")).pangram
+          ) {
+            setCorrectGuesses([]);
+            setPoints(0);
+
+            localStorage.setItem("pangram", JSON.stringify(todaysPan));
+            localStorage.setItem(
+              "yesterdaysPangram",
+              JSON.stringify(yesterdaysPan)
+            );
+          }
         },
       }
     );
@@ -78,14 +84,14 @@ const Main = (props) => {
     <main className="mainMain">
       <Ranking points={points} maxPoints={maxPoints} ranking={ranking} />
       <CorrectGuesses
-        maxWords={simpleWords.length}
+        maxWords={answers.length}
         correctGuesses={correctGuesses}
         text={getText()}
       />
       <Game
         correctGuesses={correctGuesses}
         setCorrectGuesses={setCorrectGuesses}
-        simpleWords={simpleWords}
+        answers={answers}
         setPoints={setPoints}
         countPoints={countPoints}
         letters={letters}

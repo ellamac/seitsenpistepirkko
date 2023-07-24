@@ -36,8 +36,7 @@ export const sanaObjects = {
       "aamiaiskaappi",
       "aamiaistunti",
       "aamu",
-      "aamu-uninen",
-      "aamu-unisuus",
+
       "aamuaskare",
       "aamuateria",
       "aamuhartaus",
@@ -336,8 +335,7 @@ export const sanaObjects = {
       "aihio",
       "aijai",
       "aika",
-      "aika-ajo",
-      "aika-arvo",
+
       "aikaansaada",
       "aikaansaannos",
       "aikaansaanti",
@@ -861,7 +859,7 @@ export const sanaObjects = {
       "aletusten",
       "aleutti",
       "alfa",
-      "alfa-alfa",
+
       "alfalfa",
       "alfanaaras",
       "alfasäteet",
@@ -1287,9 +1285,7 @@ export const sanaObjects = {
       "ampuja",
       "ampulla",
       "ampulli",
-      "ampuma-ala",
-      "ampuma-ase",
-      "ampuma-aukko",
+
       "ampumahaava",
       "ampumakilpailu",
       "ampumaoppi",
@@ -1344,7 +1340,7 @@ export const sanaObjects = {
       "anenkefalia",
       "anesteetti",
       "anestesia",
-      "anestesia-aine",
+
       "angervo",
       "angiina",
       "angiografia",
@@ -1644,7 +1640,7 @@ export const sanaObjects = {
       "arkeittain",
       "arkeoni",
       "arki",
-      "arki-ilta",
+
       "arkiaskare",
       "arkiateria",
       "arkijärki",
@@ -1768,7 +1764,7 @@ export const sanaObjects = {
       "arvioittaa",
       "arviolta",
       "arvo",
-      "arvo-osuus",
+
       "arvoalue",
       "arvoaste",
       "arvoinen",
@@ -1889,7 +1885,7 @@ export const sanaObjects = {
       "asfaltti",
       "asfalttitie",
       "asia",
-      "asia-aine",
+
       "asiaintila",
       "asiakas",
       "asiakaskone",
@@ -1984,7 +1980,7 @@ export const sanaObjects = {
       "astalo",
       "astatiini",
       "aste",
-      "aste-ero",
+
       "asteekki",
       "asteeninen",
       "asteettain",
@@ -2038,7 +2034,7 @@ export const sanaObjects = {
       "asukki",
       "asukokonaisuus",
       "asuma",
-      "asuma-alue",
+
       "asumaton",
       "asumislisä",
       "asumistaso",
@@ -2320,7 +2316,7 @@ export const sanaObjects = {
       "aviaario",
       "aviisi",
       "avio",
-      "avio-onni",
+
       "avioehto",
       "avioero",
       "avioeste",
@@ -2532,7 +2528,7 @@ export const sanaObjects = {
       "benediktiini",
       "benigni",
       "bensa",
-      "bensa-asema",
+
       "bensiini",
       "bensiiniasema",
       "bentseeni",
@@ -3126,7 +3122,7 @@ export const sanaObjects = {
       "doku",
       "dollari",
       "dolomiitti",
-      "domain-nimi",
+
       "dominanssi",
       "dominantti",
       "dominikaani",
@@ -3775,7 +3771,7 @@ export const sanaObjects = {
       "enologia",
       "ensemble",
       "ensi",
-      "ensi-isku",
+
       "ensiapu",
       "ensiesiintyminen",
       "ensiesittää",
@@ -5360,11 +5356,10 @@ export const sanaObjects = {
       "haitek",
       "haitekki",
       "haitta",
-      "haitta-aine",
-      "haitta-aste",
+
       "haituva",
       "haiven",
-      "haja-asutus",
+
       "hajaannus",
       "hajaannuttaa",
       "hajaantua",
@@ -5471,7 +5466,7 @@ export const sanaObjects = {
       "halailu",
       "halaista",
       "halal",
-      "halal-liha",
+
       "halata",
       "halatti",
       "halaus",
@@ -5666,7 +5661,7 @@ export const sanaObjects = {
       "hankikeli",
       "hankinnainen",
       "hankinta",
-      "hankinta-aika",
+
       "hankintahakkuu",
       "hankintahinta",
       "hankkia",
@@ -6162,7 +6157,7 @@ export const sanaObjects = {
       "heleys",
       "heleyttää",
       "heleä",
-      "heleä-ääninen",
+
       "heleäihoinen",
       "heleästi",
       "helibor",
@@ -6542,7 +6537,7 @@ export const sanaObjects = {
       "hifi",
       "hightech",
       "hiha",
-      "hiha-aukko",
+
       "hihalauta",
       "hihallinen",
       "hihamerkki",
@@ -6571,7 +6566,7 @@ export const sanaObjects = {
       "hiihtarit",
       "hiihtely",
       "hiihto",
-      "hiihto-osuus",
+
       "hiihtoasu",
       "hiihtohissi",
       "hiihtohousut",
@@ -7012,7 +7007,7 @@ export const sanaObjects = {
       "hoitajatar",
       "hoitelu",
       "hoito",
-      "hoito-ohje",
+
       "hoitoaika",
       "hoitoaine",
       "hoitoala",
@@ -7037,7 +7032,7 @@ export const sanaObjects = {
       "hoitua",
       "hoituri",
       "hoiva",
-      "hoiva-ala",
+
       "hoivailla",
       "hoivakoti",
       "hoivata",
@@ -7307,7 +7302,7 @@ export const sanaObjects = {
       "hukata",
       "huki",
       "hukka",
-      "hukka-aika",
+
       "hukkaan",
       "hukkaantua",
       "hukkakaura",
@@ -7477,7 +7472,7 @@ export const sanaObjects = {
       "huoneke",
       "huoneusto",
       "huono",
-      "huono-onninen",
+
       "huonommuus",
       "huononnus",
       "huonontaa",
@@ -7564,7 +7559,7 @@ export const sanaObjects = {
       "hursti",
       "hurtta",
       "hurtti",
-      "huru-ukko",
+
       "husaari",
       "huseerata",
       "hutaista",
@@ -8500,7 +8495,7 @@ export const sanaObjects = {
       "ikivihanta",
       "ikivihreä",
       "ikkuna",
-      "ikkuna-aukko",
+
       "ikkunakitti",
       "ikkunakuori",
       "ikkunalasi",
@@ -8620,8 +8615,7 @@ export const sanaObjects = {
       "illuusioton",
       "illuusiottomuus",
       "ilma",
-      "ilma-alus",
-      "ilma-ase",
+
       "ilmaantua",
       "ilmahoito",
       "ilmailla",
@@ -8770,7 +8764,7 @@ export const sanaObjects = {
       "ilotyttö",
       "ilouutinen",
       "ilta",
-      "ilta-ateria",
+
       "iltahetki",
       "iltahuuto",
       "iltahuvi",
@@ -9581,8 +9575,7 @@ export const sanaObjects = {
       "jakku",
       "jakkupuku",
       "jako",
-      "jako-osa",
-      "jako-osuus",
+
       "jakoavain",
       "jakobiini",
       "jakokaappi",
@@ -9749,7 +9742,7 @@ export const sanaObjects = {
       "jatkavuus",
       "jatke",
       "jatko",
-      "jatko-osa",
+
       "jatkoaika",
       "jatkohoito",
       "jatkojalostaa",
@@ -9892,7 +9885,7 @@ export const sanaObjects = {
       "johtava",
       "johteinen",
       "johto",
-      "johto-oppi",
+
       "johtoaihe",
       "johtoajatus",
       "johtohahmo",
@@ -10012,7 +10005,7 @@ export const sanaObjects = {
       "jouhikko",
       "joukkio",
       "joukko",
-      "joukko-oppi",
+
       "joukkoero",
       "joukkohauta",
       "joukkojakelu",
@@ -10028,7 +10021,7 @@ export const sanaObjects = {
       "joukkue",
       "joule",
       "joulu",
-      "joulu-ukko",
+
       "jouluaamu",
       "jouluaatto",
       "jouluaattoilta",
@@ -10118,7 +10111,7 @@ export const sanaObjects = {
       "juhannusjuhla",
       "juhannusruusu",
       "juhla",
-      "juhla-asu",
+
       "juhlahumu",
       "juhlajuoma",
       "juhlakalu",
@@ -10787,7 +10780,7 @@ export const sanaObjects = {
       "jääraappa",
       "jäärae",
       "jäärata",
-      "jäärata-ajo",
+
       "jääriite",
       "jäärä",
       "jääräpäinen",
@@ -10919,7 +10912,7 @@ export const sanaObjects = {
       "kaareva",
       "kaarevuus",
       "kaari",
-      "kaari-ikkuna",
+
       "kaariaste",
       "kaarilaukaus",
       "kaarimalja",
@@ -10994,7 +10987,7 @@ export const sanaObjects = {
       "kaatua",
       "kaatumatauti",
       "kaava",
-      "kaava-alue",
+
       "kaavaaja",
       "kaavailla",
       "kaavailu",
@@ -11916,8 +11909,7 @@ export const sanaObjects = {
       "kanssa",
       "kanssasisar",
       "kanta",
-      "kanta-asiakas",
-      "kanta-asukas",
+
       "kantaa",
       "kantaan",
       "kantaatti",
@@ -12159,7 +12151,7 @@ export const sanaObjects = {
       "kariuttaa",
       "kariutua",
       "karja",
-      "karja-aura",
+
       "karjafarmi",
       "karjahtaa",
       "karjaista",
@@ -12498,7 +12490,7 @@ export const sanaObjects = {
       "kasvovesi",
       "kasvovisiiri",
       "kasvu",
-      "kasvu-ura",
+
       "kasvuaika",
       "kasvualusta",
       "kasvuikä",
@@ -12765,7 +12757,7 @@ export const sanaObjects = {
       "kaukotaittoisuus",
       "kaukovalot",
       "kaula",
-      "kaula-aukko",
+
       "kaulahihna",
       "kaulahuivi",
       "kaulailla",
@@ -12814,8 +12806,7 @@ export const sanaObjects = {
       "kaupita",
       "kaupittaja",
       "kauppa",
-      "kauppa-alus",
-      "kauppa-auto",
+
       "kauppaaja",
       "kauppaetu",
       "kauppahalli",
@@ -12877,7 +12868,7 @@ export const sanaObjects = {
       "kautsu",
       "kautsukasvi",
       "kautta",
-      "kautta-ajo",
+
       "kauttaaltaan",
       "kauttakulku",
       "kauttakulkukauppa",
@@ -13441,8 +13432,7 @@ export const sanaObjects = {
       "keskeytyksissä",
       "keskeytys",
       "keskeytyä",
-      "keski-ikä",
-      "keski-ikäinen",
+
       "keskiaika",
       "keskiaikainen",
       "keskialue",
@@ -13999,7 +13989,7 @@ export const sanaObjects = {
       "kiilukainen",
       "kiilusilmä",
       "kiima",
-      "kiima-aika",
+
       "kiimainen",
       "kiina",
       "kiinailla",
@@ -14210,7 +14200,7 @@ export const sanaObjects = {
       "kilottaa",
       "kilowatti",
       "kilpa",
-      "kilpa-ajaja",
+
       "kilpaa",
       "kilpahakija",
       "kilpailija",
@@ -14264,7 +14254,7 @@ export const sanaObjects = {
       "kimeeri",
       "kimeys",
       "kimeä",
-      "kimeä-ääninen",
+
       "kimeästi",
       "kimittää",
       "kimitys",
@@ -14671,7 +14661,7 @@ export const sanaObjects = {
       "kitistyä",
       "kitistä",
       "kitka",
-      "kitka-aine",
+
       "kitkainen",
       "kitkajarru",
       "kitkaketju",
@@ -15375,7 +15365,7 @@ export const sanaObjects = {
       "kondomi",
       "kondori",
       "kone",
-      "kone-elin",
+
       "koneellinen",
       "koneenelin",
       "koneenosa",
@@ -15740,7 +15730,7 @@ export const sanaObjects = {
       "koruton",
       "koruttomuus",
       "korva",
-      "korva-aukko",
+
       "korvaaja",
       "korvake",
       "korvakoru",
@@ -15823,9 +15813,7 @@ export const sanaObjects = {
       "kotelomekko",
       "kotelopuku",
       "koti",
-      "koti-ikävä",
-      "koti-ilta",
-      "koti-isä",
+
       "kotia",
       "kotiaine",
       "kotiapteekki",
@@ -16269,7 +16257,7 @@ export const sanaObjects = {
       "kuikuilla",
       "kuikuilu",
       "kuilu",
-      "kuilu-uuni",
+
       "kuin",
       "kuinka",
       "kuinkaan",
@@ -16370,15 +16358,14 @@ export const sanaObjects = {
       "kukikas",
       "kukin",
       "kukinta",
-      "kukinta-aika",
+
       "kukinto",
       "kukistaa",
       "kukistua",
       "kukittaa",
       "kukitus",
       "kukka",
-      "kukka-aihe",
-      "kukka-ananas",
+
       "kukkahattutäti",
       "kukkainen",
       "kukkaisa",
@@ -16489,7 +16476,7 @@ export const sanaObjects = {
       "kulkeutuma",
       "kulkija",
       "kulku",
-      "kulku-ura",
+
       "kulkuaika",
       "kulkue",
       "kulkukauppa",
@@ -16552,7 +16539,7 @@ export const sanaObjects = {
       "kuloutua",
       "kulovalkea",
       "kulta",
-      "kulta-aika",
+
       "kultahäät",
       "kultaisuus",
       "kultakala",
@@ -16740,7 +16727,7 @@ export const sanaObjects = {
       "kunnekin",
       "kunnes",
       "kunnia",
-      "kunnia-asia",
+
       "kunniakansalaisuus",
       "kunniakas",
       "kunniakirja",
@@ -16775,7 +16762,7 @@ export const sanaObjects = {
       "kunnoton",
       "kunpa",
       "kunta",
-      "kunta-ala",
+
       "kuntajako",
       "kuntakeskus",
       "kuntamuoto",
@@ -16890,7 +16877,7 @@ export const sanaObjects = {
       "kuormaus",
       "kuormuri",
       "kuoro",
-      "kuoro-osa",
+
       "kuorolaulu",
       "kuoromusiikki",
       "kuoroteos",
@@ -17392,7 +17379,7 @@ export const sanaObjects = {
       "kuutosmaa",
       "kuutti",
       "kuva",
-      "kuva-ala",
+
       "kuvaaja",
       "kuvaamo",
       "kuvaava",
@@ -17798,7 +17785,7 @@ export const sanaObjects = {
       "käheys",
       "käheytyä",
       "käheä",
-      "käheä-ääninen",
+
       "käheästi",
       "kähinä",
       "kähistä",
@@ -18287,7 +18274,7 @@ export const sanaObjects = {
       "laahus",
       "laahustaa",
       "laaja",
-      "laaja-alainen",
+
       "laajakaista",
       "laajakangas",
       "laajakulma",
@@ -18492,7 +18479,7 @@ export const sanaObjects = {
       "laimistua",
       "lain",
       "laina",
-      "laina-aika",
+
       "lainaaja",
       "lainaamo",
       "lainaesine",
@@ -19109,7 +19096,7 @@ export const sanaObjects = {
       "latteasti",
       "latteus",
       "lattia",
-      "lattia-ala",
+
       "lattiaanlyönti",
       "lattiaharja",
       "lattiakaivo",
@@ -19125,7 +19112,7 @@ export const sanaObjects = {
       "lattiankiillotin",
       "lattianraja",
       "lattiapinta",
-      "lattiapinta-ala",
+
       "lattiarätti",
       "lattiasieni",
       "lattiasuutin",
@@ -19137,7 +19124,7 @@ export const sanaObjects = {
       "lattiavalaisin",
       "lattiavasa",
       "latu",
-      "latu-ura",
+
       "latuhiihto",
       "latukartta",
       "laturi",
@@ -19157,7 +19144,7 @@ export const sanaObjects = {
       "latvus",
       "latvusto",
       "lauantai",
-      "lauantai-ilta",
+
       "lauantaiaamu",
       "lauantainen",
       "lauantaisauna",
@@ -19186,7 +19173,7 @@ export const sanaObjects = {
       "laukaus",
       "laukaussarja",
       "laukka",
-      "laukka-askel",
+
       "laukkahyppy",
       "laukkakilpailu",
       "laukkaneilikka",
@@ -19256,7 +19243,7 @@ export const sanaObjects = {
       "lausuntailta",
       "lausunto",
       "lauta",
-      "lauta-aita",
+
       "lautailija",
       "lautailla",
       "lautailu",
@@ -19286,7 +19273,7 @@ export const sanaObjects = {
       "lautturi",
       "lautuma",
       "lava",
-      "lava-auto",
+
       "lavakomiikka",
       "lavakoomikko",
       "lavakurkku",
@@ -19428,8 +19415,7 @@ export const sanaObjects = {
       "leikkele",
       "leikkelemakkara",
       "leikki",
-      "leikki-ikä",
-      "leikki-ikäinen",
+
       "leikkieläin",
       "leikkijä",
       "leikkikalu",
@@ -20023,7 +20009,7 @@ export const sanaObjects = {
       "liikauttaa",
       "liikavarvas",
       "liike",
-      "liike-elämä",
+
       "liikeaika",
       "liikeaisti",
       "liikeala",
@@ -20086,7 +20072,7 @@ export const sanaObjects = {
       "liikkis",
       "liikkua",
       "liikkuja",
-      "liikkuma-ala",
+
       "liikkumatila",
       "liikkumiskyky",
       "liikkuva",
@@ -20771,7 +20757,7 @@ export const sanaObjects = {
       "lojaliteetti",
       "lojua",
       "loka",
-      "loka-auto",
+
       "lokaalinen",
       "lokaalisuus",
       "lokainen",
@@ -20800,7 +20786,7 @@ export const sanaObjects = {
       "lokvatti",
       "lolita",
       "loma",
-      "loma-aika",
+
       "lomaan",
       "lomailija",
       "lomailla",
@@ -21081,7 +21067,7 @@ export const sanaObjects = {
       "lukkiutua",
       "lukkiutuma",
       "lukko",
-      "lukko-ote",
+
       "lukkoliitos",
       "lukkoneula",
       "lukkoon",
@@ -21246,7 +21232,7 @@ export const sanaObjects = {
       "luoko",
       "luokse",
       "luola",
-      "luola-asumus",
+
       "luolakoira",
       "luolamaalaus",
       "luolasto",
@@ -22760,7 +22746,7 @@ export const sanaObjects = {
       "mansi",
       "mansikankukka",
       "mansikka",
-      "mansikka-aika",
+
       "mansikkakakku",
       "mansikkamaa",
       "mansikkapaikka",
@@ -22809,7 +22795,7 @@ export const sanaObjects = {
       "marisija",
       "marista",
       "marja",
-      "marja-aika",
+
       "marjainen",
       "marjaisa",
       "marjamaito",
@@ -22949,7 +22935,7 @@ export const sanaObjects = {
       "matalameri",
       "matalamielinen",
       "matalamielisesti",
-      "matalapalkka-ala",
+
       "matalikko",
       "mataloittaa",
       "mataloitua",
@@ -22972,9 +22958,7 @@ export const sanaObjects = {
       "matikkapää",
       "matinea",
       "matka",
-      "matka-aie",
-      "matka-aika",
-      "matka-ajo",
+
       "matkaaja",
       "matkaansaattaa",
       "matkailija",
@@ -23257,7 +23241,7 @@ export const sanaObjects = {
       "merensininen",
       "merenvaha",
       "meri",
-      "meri-ilma",
+
       "merialue",
       "meridiaani",
       "merieläin",
@@ -23433,7 +23417,7 @@ export const sanaObjects = {
       "metsokukko",
       "metsuri",
       "metsä",
-      "metsä-äes",
+
       "metsäala",
       "metsäinen",
       "metsäisyys",
@@ -23816,7 +23800,7 @@ export const sanaObjects = {
       "mitra",
       "mitsuba",
       "mitta",
-      "mitta-astia",
+
       "mittaaja",
       "mittaamaton",
       "mittaamattomasti",
@@ -23968,7 +23952,7 @@ export const sanaObjects = {
       "mongolidi",
       "mongolismi",
       "moni",
-      "moni-ilmeinen",
+
       "moniaalla",
       "moniaalle",
       "moniaalta",
@@ -24348,7 +24332,7 @@ export const sanaObjects = {
       "muokkauskausi",
       "muokkautua",
       "muona",
-      "muona-annos",
+
       "muonittaa",
       "muonittamo",
       "muonitus",
@@ -24362,7 +24346,7 @@ export const sanaObjects = {
       "muotittaa",
       "muotitus",
       "muoto",
-      "muoto-oppi",
+
       "muotoaisti",
       "muotoilla",
       "muotoilu",
@@ -24718,7 +24702,7 @@ export const sanaObjects = {
       "myrkytys",
       "myrkytön",
       "myrsky",
-      "myrsky-yö",
+
       "myrskyisyys",
       "myrskyisä",
       "myrskykeskus",
@@ -25270,7 +25254,7 @@ export const sanaObjects = {
       "nanotekninen",
       "nanotiede",
       "napa",
-      "napa-alue",
+
       "napaisuus",
       "napajäkälä",
       "napajää",
@@ -25478,7 +25462,7 @@ export const sanaObjects = {
       "nautarotu",
       "nautiikka",
       "nautinta",
-      "nautinta-aika",
+
       "nautinto",
       "nautintoaine",
       "nautittava",
@@ -25876,7 +25860,7 @@ export const sanaObjects = {
       "nippelihullu",
       "nippelitieto",
       "nippu",
-      "nippu-uitto",
+
       "nippulautta",
       "nippuside",
       "nipsahtaa",
@@ -25975,7 +25959,7 @@ export const sanaObjects = {
       "noin",
       "noisetti",
       "noita",
-      "noita-akka",
+
       "noitakonsti",
       "noitarovio",
       "noitavaino",
@@ -26101,7 +26085,7 @@ export const sanaObjects = {
       "nostelu",
       "nostin",
       "nosto",
-      "nosto-ovi",
+
       "nostokoukku",
       "nostolava",
       "nostomies",
@@ -26304,7 +26288,7 @@ export const sanaObjects = {
       "nuotittaa",
       "nuotitus",
       "nuotta",
-      "nuotta-avanto",
+
       "nuottakota",
       "nuottakunta",
       "nuottaruoho",
@@ -26849,7 +26833,7 @@ export const sanaObjects = {
       "oikaisu",
       "oikaisuluku",
       "oikea",
-      "oikea-aikainen",
+
       "oikeaan",
       "oikeakielinen",
       "oikealla",
@@ -27239,7 +27223,7 @@ export const sanaObjects = {
       "oopiumipiippu",
       "oopiumiunikko",
       "ooppera",
-      "ooppera-aaria",
+
       "oopperakuoro",
       "oopperatalo",
       "ootrata",
@@ -27291,7 +27275,7 @@ export const sanaObjects = {
       "opistoaste",
       "opossumi",
       "oppi",
-      "oppi-isä",
+
       "oppia",
       "oppiaika",
       "oppiaine",
@@ -27812,7 +27796,7 @@ export const sanaObjects = {
       "paikantua",
       "paikata",
       "paikka",
-      "paikka-aine",
+
       "paikkailla",
       "paikkailu",
       "paikkajako",
@@ -28027,7 +28011,7 @@ export const sanaObjects = {
       "pakki",
       "pakkilaatikko",
       "pakko",
-      "pakko-otto",
+
       "pakkohoito",
       "pakkohuutokauppa",
       "pakkokeino",
@@ -28220,8 +28204,7 @@ export const sanaObjects = {
       "palmulilja",
       "palmupuu",
       "palo",
-      "palo-osasto",
-      "palo-ovi",
+
       "paloa",
       "paloasema",
       "paloauto",
@@ -28673,13 +28656,7 @@ export const sanaObjects = {
       "pasifisti",
       "pasifistisesti",
       "pasifistisuus",
-      "paska",
-      "paskainen",
-      "paskamyrsky",
-      "paskantaa",
-      "paskapuhe",
-      "paskapää",
-      "paskatyö",
+
       "paskiainen",
       "paskoa",
       "pasma",
@@ -28920,7 +28897,7 @@ export const sanaObjects = {
       "peitsaus",
       "peitsi",
       "peitta",
-      "peitta-aine",
+
       "peittaus",
       "peitteinen",
       "peittely",
@@ -29614,7 +29591,7 @@ export const sanaObjects = {
       "piilipuu",
       "piillä",
       "piilo",
-      "piilo-ommel",
+
       "piilokas",
       "piilokulu",
       "piilokärki",
@@ -29744,8 +29721,7 @@ export const sanaObjects = {
       "piitata",
       "piittaamaton",
       "piittaamattomasti",
-      "pika-aidat",
-      "pika-arpa",
+
       "pikaa",
       "pikainen",
       "pikaisesti",
@@ -29820,7 +29796,7 @@ export const sanaObjects = {
       "pikkolohuilu",
       "pikkolopullo",
       "pikku",
-      "pikku-ukko",
+
       "pikkuasia",
       "pikkuauto",
       "pikkubussi",
@@ -30068,7 +30044,7 @@ export const sanaObjects = {
       "pinsettiote",
       "pinssi",
       "pinta",
-      "pinta-ala",
+
       "pintaan",
       "pintahaava",
       "pintahiiva",
@@ -30397,7 +30373,7 @@ export const sanaObjects = {
       "pohatta",
       "pohdin",
       "pohja",
-      "pohja-ala",
+
       "pohjahiiva",
       "pohjajää",
       "pohjakala",
@@ -31256,7 +31232,7 @@ export const sanaObjects = {
       "pukuraha",
       "pukusuoja",
       "pula",
-      "pula-aika",
+
       "pulahdus",
       "pulahtaa",
       "pulaus",
@@ -31294,7 +31270,7 @@ export const sanaObjects = {
       "pullistua",
       "pullistus",
       "pullo",
-      "pullo-olut",
+
       "pullokori",
       "pullolapsi",
       "pullolasi",
@@ -31356,7 +31332,7 @@ export const sanaObjects = {
       "pumpulituppo",
       "pumputa",
       "puna",
-      "puna-apila",
+
       "punaharmaa",
       "punahehku",
       "punahonka",
@@ -32634,7 +32610,7 @@ export const sanaObjects = {
       "raajapari",
       "raajarikko",
       "raaka",
-      "raaka-aine",
+
       "raakadata",
       "raakakahvi",
       "raakakakku",
@@ -32769,9 +32745,7 @@ export const sanaObjects = {
       "ragtime",
       "raguu",
       "raha",
-      "raha-arpa",
-      "raha-arvo",
-      "raha-asia",
+
       "rahahuoli",
       "rahakanta",
       "rahakas",
@@ -32940,12 +32914,7 @@ export const sanaObjects = {
       "raivotila",
       "raivuri",
       "raja",
-      "raja-aita",
-      "raja-alue",
-      "raja-arvo",
-      "raja-asema",
-      "raja-asukas",
-      "raja-asutus",
+
       "rajahinta",
       "rajain",
       "rajajoki",
@@ -33011,7 +32980,7 @@ export const sanaObjects = {
       "rakeistaa",
       "rakeisuus",
       "rakenne",
-      "rakenne-ero",
+
       "rakennekaava",
       "rakennella",
       "rakennelma",
@@ -33150,7 +33119,7 @@ export const sanaObjects = {
       "ranskatar",
       "ranskis",
       "ranta",
-      "ranta-asu",
+
       "rantaantua",
       "rantakaava",
       "rantakala",
@@ -33327,7 +33296,7 @@ export const sanaObjects = {
       "rasvis",
       "rasvoittaa",
       "rata",
-      "rata-ajo",
+
       "ratagolf",
       "ratakelaaja",
       "ratakisko",
@@ -33428,7 +33397,7 @@ export const sanaObjects = {
       "rauniolinna",
       "rausku",
       "rauta",
-      "rauta-aita",
+
       "rautahammas",
       "rautainen",
       "rautaisesti",
@@ -33802,7 +33771,7 @@ export const sanaObjects = {
       "reumasairaus",
       "reumatauti",
       "reuna",
-      "reuna-alue",
+
       "reunake",
       "reunalauta",
       "reunama",
@@ -33988,7 +33957,7 @@ export const sanaObjects = {
       "riisiviina",
       "riisiviini",
       "riista",
-      "riista-aita",
+
       "riistainen",
       "riistakanta",
       "riistalaji",
@@ -34003,7 +33972,7 @@ export const sanaObjects = {
       "riisuuntua",
       "riisuutua",
       "riita",
-      "riita-asia",
+
       "riitaannuttaa",
       "riitaantua",
       "riitainen",
@@ -34196,7 +34165,7 @@ export const sanaObjects = {
       "ripote",
       "ripottaa",
       "rippi",
-      "rippi-isä",
+
       "rippikoulu",
       "rippikuva",
       "rippilahja",
@@ -34714,8 +34683,7 @@ export const sanaObjects = {
       "rullaus",
       "rullautua",
       "rullavyö",
-      "rulo-ovi",
-      "ruloo-ovi",
+
       "ruma",
       "rumasti",
       "rumba",
@@ -34806,8 +34774,7 @@ export const sanaObjects = {
       "ruoisto",
       "ruoja",
       "ruoka",
-      "ruoka-aika",
-      "ruoka-apu",
+
       "ruokahalu",
       "ruokailla",
       "ruokailu",
@@ -34920,7 +34887,7 @@ export const sanaObjects = {
       "rusisti",
       "rusistiikka",
       "ruska",
-      "ruska-aika",
+
       "ruskaa",
       "ruskea",
       "ruskeakarhu",
@@ -35005,7 +34972,7 @@ export const sanaObjects = {
       "ruudutus",
       "ruuhi",
       "ruuhka",
-      "ruuhka-aika",
+
       "ruuhkaantua",
       "ruuhkahuippu",
       "ruuhkaisuus",
@@ -35297,7 +35264,7 @@ export const sanaObjects = {
       "räike",
       "räikeys",
       "räikeä",
-      "räikeä-ääninen",
+
       "räikeänvärinen",
       "räikeästi",
       "räikeävärinen",
@@ -35657,8 +35624,6 @@ export const sanaObjects = {
       "saastuttaja",
       "saastutus",
       "saatana",
-      "saatanallinen",
-      "saatanasti",
       "saatava",
       "saatavana",
       "saatavilla",
@@ -35675,7 +35640,7 @@ export const sanaObjects = {
       "saatille",
       "saattaa",
       "saattaja",
-      "saattaja-alus",
+
       "saattelija",
       "saattelu",
       "saatto",
@@ -36288,7 +36253,7 @@ export const sanaObjects = {
       "sardiinirasia",
       "sari",
       "sarja",
-      "sarja-avaus",
+
       "sarjajako",
       "sarjakamera",
       "sarjakausi",
@@ -36336,7 +36301,7 @@ export const sanaObjects = {
       "saslikki",
       "sassiin",
       "sata",
-      "sata-asteinen",
+
       "sataa",
       "satakerta",
       "satakertaisesti",
@@ -36345,7 +36310,7 @@ export const sanaObjects = {
       "satakunta",
       "sataluku",
       "satama",
-      "satama-allas",
+
       "satamajätkä",
       "satamalaitos",
       "satanen",
@@ -37209,7 +37174,7 @@ export const sanaObjects = {
       "sienestää",
       "sienettyä",
       "sieni",
-      "sieni-itiö",
+
       "sieniaika",
       "sieniasema",
       "sienieläin",
@@ -38429,7 +38394,7 @@ export const sanaObjects = {
       "soittelu",
       "soittimisto",
       "soitto",
-      "soitto-opinnot",
+
       "soittokello",
       "soittokone",
       "soittolava",
@@ -38770,8 +38735,7 @@ export const sanaObjects = {
       "sosiopatia",
       "sossu",
       "sota",
-      "sota-aika",
-      "sota-alus",
+
       "sotaherra",
       "sotahistoria",
       "sotahullu",
@@ -39771,7 +39735,7 @@ export const sanaObjects = {
       "surku",
       "surkuttelu",
       "surma",
-      "surma-ase",
+
       "surmaaja",
       "surmakka",
       "surmanajaja",
@@ -41141,13 +41105,9 @@ export const sanaObjects = {
       "tajuton",
       "tajuttomuus",
       "taka",
-      "taka-ajatus",
-      "taka-ala",
-      "taka-askel",
+
       "takaa",
-      "takaa-ajaja",
-      "takaa-ajettu",
-      "takaa-ajo",
+
       "takaaja",
       "takaaladattava",
       "takaapäin",
@@ -41452,7 +41412,7 @@ export const sanaObjects = {
       "talveutua",
       "talveutus",
       "talvi",
-      "talvi-ilta",
+
       "talviaika",
       "talviajo",
       "talviasuttava",
@@ -41771,10 +41731,7 @@ export const sanaObjects = {
       "tarvis",
       "tarvita",
       "tarvitsija",
-      "tasa-aineinen",
-      "tasa-arvo",
-      "tasa-astuja",
-      "tasa-astunta",
+
       "tasaaja",
       "tasaan",
       "tasaannuttaa",
@@ -42112,7 +42069,7 @@ export const sanaObjects = {
       "tehdasajaja",
       "tehdä",
       "teho",
-      "teho-osasto",
+
       "tehoaika",
       "tehoaine",
       "tehohoito",
@@ -42155,8 +42112,7 @@ export const sanaObjects = {
       "teili",
       "teilipuu",
       "teini",
-      "teini-ikä",
-      "teini-ikäinen",
+
       "teinikunta",
       "teininuori",
       "teinityttö",
@@ -42191,7 +42147,7 @@ export const sanaObjects = {
       "teknisyys",
       "tekno",
       "teko",
-      "teko-ohje",
+
       "tekoaika",
       "tekoaine",
       "tekoaineinen",
@@ -42258,7 +42214,7 @@ export const sanaObjects = {
       "tela",
       "telaketju",
       "telakka",
-      "telakka-allas",
+
       "telaluu",
       "telamatto",
       "telapuu",
@@ -42640,7 +42596,7 @@ export const sanaObjects = {
       "tietenkin",
       "tietenkään",
       "tieto",
-      "tieto-oppi",
+
       "tietoaine",
       "tietoaineisto",
       "tietoaines",
@@ -42823,7 +42779,7 @@ export const sanaObjects = {
       "tikkitakki",
       "tikkivuori",
       "tikku",
-      "tikku-ukko",
+
       "tikkuinen",
       "tikkulaatikko",
       "tikkunekku",
@@ -42834,7 +42790,7 @@ export const sanaObjects = {
       "tikli",
       "tikuttaa",
       "tila",
-      "tila-auto",
+
       "tilaaja",
       "tilaelementti",
       "tilaisuus",
@@ -42937,7 +42893,7 @@ export const sanaObjects = {
       "timperi",
       "timpuri",
       "tina",
-      "tina-astia",
+
       "tinaesine",
       "tinainen",
       "tinakannu",
@@ -43314,7 +43270,7 @@ export const sanaObjects = {
       "tonttikartta",
       "tonttimaa",
       "tonttu",
-      "tonttu-ukko",
+
       "tonttuilla",
       "tonttuilu",
       "tonttupuku",
@@ -43879,7 +43835,7 @@ export const sanaObjects = {
       "tulenteko",
       "tuleva",
       "tuli",
-      "tuli-isku",
+
       "tuliainen",
       "tuliase",
       "tulija",
@@ -43995,8 +43951,7 @@ export const sanaObjects = {
       "tulppautua",
       "tulukset",
       "tulva",
-      "tulva-aalto",
-      "tulva-alue",
+
       "tulvahtaa",
       "tulvamaa",
       "tulvaraja",
@@ -44366,7 +44321,7 @@ export const sanaObjects = {
       "turkoosi",
       "turku",
       "turma",
-      "turma-auto",
+
       "turmella",
       "turmeltua",
       "turmelu",
@@ -44401,7 +44356,7 @@ export const sanaObjects = {
       "turtumus",
       "turturikyyhky",
       "turva",
-      "turva-auto",
+
       "turvaaja",
       "turvaisa",
       "turvakaari",
@@ -44472,7 +44427,7 @@ export const sanaObjects = {
       "tutista",
       "tutisuttaa",
       "tutka",
-      "tutka-aallot",
+
       "tutkailija",
       "tutkailla",
       "tutkain",
@@ -45240,8 +45195,7 @@ export const sanaObjects = {
       "täydesti",
       "täynnä",
       "täysi",
-      "täysi-ikäistyä",
-      "täysi-ikäisyys",
+
       "täysihoito",
       "täysikuu",
       "täysillä",
@@ -45503,7 +45457,7 @@ export const sanaObjects = {
       "uikku",
       "uikuttaa",
       "uikutus",
-      "uima-allas",
+
       "uimahalli",
       "uimahyppy",
       "uimakoppi",
@@ -45616,8 +45570,7 @@ export const sanaObjects = {
       "uljaus",
       "uljuus",
       "ulko",
-      "ulko-osa",
-      "ulko-ovi",
+
       "ulkoa",
       "ulkoasu",
       "ulkofile",
@@ -45702,7 +45655,7 @@ export const sanaObjects = {
       "ulosliputus",
       "ulosmeno",
       "ulosotto",
-      "ulosotto-osasto",
+
       "ulosottoteitse",
       "ulospääsy",
       "ulostaa",
@@ -45885,7 +45838,7 @@ export const sanaObjects = {
       "upouusi",
       "uppiniskaisuus",
       "uppista",
-      "uppo-outo",
+
       "uppoama",
       "uppoamaton",
       "uppoasennus",
@@ -46294,8 +46247,7 @@ export const sanaObjects = {
       "vaaputtaa",
       "vaaputus",
       "vaara",
-      "vaara-alue",
-      "vaara-asutus",
+
       "vaarain",
       "vaarainen",
       "vaarajono",
@@ -46788,7 +46740,7 @@ export const sanaObjects = {
       "valmu",
       "valmuska",
       "valo",
-      "valo-oppi",
+
       "valoaallot",
       "valoammus",
       "valodiodi",
@@ -46900,7 +46852,7 @@ export const sanaObjects = {
       "valu",
       "valua",
       "valuma",
-      "valuma-alue",
+
       "valumassa",
       "valunta",
       "valurauta",
@@ -47015,8 +46967,7 @@ export const sanaObjects = {
       "vanutus",
       "vapa",
       "vapaa",
-      "vapaa-aika",
-      "vapaa-alue",
+
       "vapaaherra",
       "vapaaherratar",
       "vapaailta",
@@ -47072,8 +47023,7 @@ export const sanaObjects = {
       "vapunaatto",
       "vapunpäivä",
       "vara",
-      "vara-amiraali",
-      "vara-avain",
+
       "varaaja",
       "varaamo",
       "varaan",
@@ -47318,7 +47268,7 @@ export const sanaObjects = {
       "vastaanottavasti",
       "vastaanottavuus",
       "vastaanotto",
-      "vastaanotto-osasto",
+
       "vastaanpano",
       "vastaansanomaton",
       "vastaava",
@@ -47427,7 +47377,7 @@ export const sanaObjects = {
       "vatkutus",
       "vatruska",
       "vatsa",
-      "vatsa-aortta",
+
       "vatsaevä",
       "vatsahaava",
       "vatsahappo",
@@ -48578,7 +48528,7 @@ export const sanaObjects = {
       "vilistä",
       "vilistää",
       "vilja",
-      "vilja-aitta",
+
       "viljakaskas",
       "viljakasvi",
       "viljakirva",
@@ -48847,8 +48797,7 @@ export const sanaObjects = {
       "viritä",
       "viriö",
       "virka",
-      "virka-aika",
-      "virka-asia",
+
       "virkaero",
       "virkaikä",
       "virkailija",
@@ -48916,7 +48865,7 @@ export const sanaObjects = {
       "virsta",
       "virsu",
       "virta",
-      "virta-avain",
+
       "virtaama",
       "virtailla",
       "virtainen",
@@ -49047,11 +48996,7 @@ export const sanaObjects = {
       "vitsikkäästi",
       "vitsikäs",
       "vitsoa",
-      "vittu",
-      "vittuilla",
-      "vittuilu",
-      "vittumaisuus",
-      "vittuuntua",
+
       "vituraan",
       "viturassa",
       "vitusti",
@@ -49161,7 +49106,7 @@ export const sanaObjects = {
       "voittajavaltio",
       "voittamaton",
       "voitto",
-      "voitto-osuus",
+
       "voittoaika",
       "voittoarpa",
       "voittoheitto",
@@ -49287,7 +49232,7 @@ export const sanaObjects = {
       "vuorivanu",
       "vuorivilla",
       "vuoro",
-      "vuoro-ote",
+
       "vuorohiihto",
       "vuorokone",
       "vuorolaulu",
@@ -50082,7 +50027,7 @@ export const sanaObjects = {
       "ylvästely",
       "ylväys",
       "ylväästi",
-      "ylä-ääni",
+
       "yläaste",
       "yläfemma",
       "ylähammas",
@@ -50673,7 +50618,6 @@ export const sanaObjects = {
       "äärevyys",
       "äärevä",
       "ääri",
-      "ääri-ilmiö",
       "ääriaines",
       "äärialue",
       "ääriarvo",

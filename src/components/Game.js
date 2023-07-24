@@ -4,7 +4,7 @@ import { shuffleLetters } from "../helpers/words";
 const Game = ({
   correctGuesses,
   setCorrectGuesses,
-  simpleWords,
+  answers,
   setPoints,
   countPoints,
   letters,
@@ -31,7 +31,7 @@ const Game = ({
       correctGuesses.includes(guess)
     ) {
       message = "jo löydetty :)";
-    } else if (simpleWords.includes(lowerCaseGuess)) {
+    } else if (answers.includes(lowerCaseGuess)) {
       setCorrectGuesses((prevArr) => [...prevArr, lowerCaseGuess].sort());
       setPoints((prev) => prev + countPoints(lowerCaseGuess));
       message = "Jee oikee sana!";

@@ -20,7 +20,7 @@ export const createAnswerList = (pangram) => {
   let words = [];
 
   /*list all the unique letters of the pangram and shuffle the list */
-  letters = [...new Set(pangram.replace(/-|’/g, "").split(""))];
+  letters = [...new Set(pangram.replace(/"/g, "").split(""))];
   letters = shuffleLetters(letters);
 
   /*make a list of all the words that can be made up from the pangram's letters */
