@@ -8,22 +8,18 @@ import Game from "./Game";
 import Answers from "./Answers";
 
 const Main = (props) => {
-  const [letters, answers] = localStorage.getItem("pangram")
-    ? createLetters(JSON.parse(localStorage.getItem("pangram")).pangram)
-    : [[], []];
-  const [yesterdaysLetters, yesterdaysAnswers] = localStorage.getItem(
-    "yesterdaysPangram"
-  )
-    ? createLetters(
-        JSON.parse(localStorage.getItem("yesterdaysPangram")).pangram
-      )
-    : [[], []];
+  const [letters, answers] =
+    localStorage.getItem("pangram").length === 7
+      ? createLetters(localStorage.getItem("pangram"))
+      : [[], []];
+  const [yesterdaysLetters, yesterdaysAnswers] =
+    localStorage.getItem("yesterdaysPangram").length === 7
+      ? createLetters(localStorage.getItem("yesterdaysPangram"))
+      : [[], []];
   const maxPoints = answers.reduce((acc, cur) => acc + countPoints(cur), 0);
-  const [correctGuesses, setCorrectGuesses] = useState(() => {
-    const saved = localStorage.getItem("correctGuesses");
-    const initialValue = JSON.parse(saved);
-    return initialValue || [];
-  });
+  const [correctGuesses, setCorrectGuesses] = useState(
+    () => JSON.parse(localStorage.getItem("correctGuesses")) || []
+  );
   const [points, setPoints] = useState(
     correctGuesses.length > 0
       ? correctGuesses.reduce((acc, cur) => acc + countPoints(cur), 0)
@@ -38,23 +34,21 @@ const Main = (props) => {
         download: true,
         header: true,
         complete: (results) => {
-          let todaysPan = results.data.find((p) => p.date === currentDate(0));
+          let todaysPan = results.data.find(
+            (p) => p.date === currentDate(0)
+          ).pangram;
           let yesterdaysPan = results.data.find(
             (p) => p.date === currentDate(1)
-          );
+          ).pangram;
           if (
             localStorage.getItem("pangram") &&
-            todaysPan.pangram !==
-              JSON.parse(localStorage.getItem("pangram")).pangram
+            todaysPan !== localStorage.getItem("pangram")
           ) {
             setCorrectGuesses([]);
             setPoints(0);
           }
-          localStorage.setItem("pangram", JSON.stringify(todaysPan));
-          localStorage.setItem(
-            "yesterdaysPangram",
-            JSON.stringify(yesterdaysPan)
-          );
+          localStorage.setItem("pangram", todaysPan);
+          localStorage.setItem("yesterdaysPangram", yesterdaysPan);
         },
       }
     );
