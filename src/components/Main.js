@@ -43,18 +43,18 @@ const Main = (props) => {
             (p) => p.date === currentDate(1)
           );
           if (
+            localStorage.getItem("pangram") &&
             todaysPan.pangram !==
-            JSON.parse(localStorage.getItem("pangram")).pangram
+              JSON.parse(localStorage.getItem("pangram")).pangram
           ) {
             setCorrectGuesses([]);
             setPoints(0);
-
-            localStorage.setItem("pangram", JSON.stringify(todaysPan));
-            localStorage.setItem(
-              "yesterdaysPangram",
-              JSON.stringify(yesterdaysPan)
-            );
           }
+          localStorage.setItem("pangram", JSON.stringify(todaysPan));
+          localStorage.setItem(
+            "yesterdaysPangram",
+            JSON.stringify(yesterdaysPan)
+          );
         },
       }
     );
