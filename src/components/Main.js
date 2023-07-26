@@ -9,10 +9,12 @@ import Answers from "./Answers";
 
 const Main = (props) => {
   const [letters, answers] =
+    localStorage.getItem("pangram") &&
     localStorage.getItem("pangram").length === 7
       ? createLetters(localStorage.getItem("pangram"))
       : [[], []];
   const [yesterdaysLetters, yesterdaysAnswers] =
+    localStorage.getItem("yesterdaysPangram") &&
     localStorage.getItem("yesterdaysPangram").length === 7
       ? createLetters(localStorage.getItem("yesterdaysPangram"))
       : [[], []];
