@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Ladybug from "./Ladybug";
-import { shuffleLetters } from "../helpers/words";
 import { countPoints } from "../helpers/points";
 
 const Game = ({
@@ -9,15 +8,11 @@ const Game = ({
   answers,
   setPoints,
   letters,
+  setLetters,
   ranking,
 }) => {
   const [inputMessage, setInputMessage] = useState("");
   const [guess, setGuess] = useState("");
-  const [lettersOnLadyBug, setlettersOnLadyBug] = useState([]);
-
-  useEffect(() => {
-    setlettersOnLadyBug(letters);
-  }, [letters]);
 
   const addLetterToGuess = (letter) => () => {
     setInputMessage("");
@@ -56,6 +51,19 @@ const Game = ({
     setGuess((prev) => prev.substring(0, prev.length - 1));
   };
 
+  const shuffleLetters = () => {
+    let first = [letters[0]];
+    let allButFirst = [...letters.slice(1)];
+
+    for (let i = allButFirst.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = allButFirst[i];
+      allButFirst[i] = allButFirst[j];
+      allButFirst[j] = temp;
+    }
+
+    setLetters(first.concat(allButFirst));
+  };
   return (
     <section className="game">
       <p className="guessText">{guess}</p>
@@ -68,10 +76,7 @@ const Game = ({
         <button type="button" onClick={backspace}>
           Kumita
         </button>
-        <button
-          type="button"
-          onClick={() => setlettersOnLadyBug((prev) => shuffleLetters(prev))}
-        >
+        <button type="button" onClick={shuffleLetters}>
           Sekoita
         </button>
         <button type="button" onClick={checkGuess}>

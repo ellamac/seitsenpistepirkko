@@ -8,11 +8,17 @@ import Game from "./Game";
 import Answers from "./Answers";
 
 const Main = (props) => {
-  const [letters, answers] =
+  const [letters, setLetters] = useState(() =>
     localStorage.getItem("pangram") &&
     localStorage.getItem("pangram").length === 7
-      ? createLetters(localStorage.getItem("pangram"))
-      : [[], []];
+      ? createLetters(localStorage.getItem("pangram"))[0]
+      : []
+  );
+  let answers =
+    localStorage.getItem("pangram") &&
+    localStorage.getItem("pangram").length === 7
+      ? createLetters(localStorage.getItem("pangram"))[1]
+      : [];
   const [yesterdaysLetters, yesterdaysAnswers] =
     localStorage.getItem("yesterdaysPangram") &&
     localStorage.getItem("yesterdaysPangram").length === 7
@@ -73,7 +79,6 @@ const Main = (props) => {
     }${extra}%0D%0A7PP ${currentDate(0)}%0D%0ALöysin ${
       correctGuesses.length
     } sanaa ja%0D%0Asain ${points} pistettä.%0D%0Ahttps://ellamac.github.io/seitsenpistepirkko/`;
-    console.log("TEXT", text);
     return text;
   };
   return letters.length === 0 ? (
@@ -92,6 +97,7 @@ const Main = (props) => {
         answers={answers}
         setPoints={setPoints}
         letters={letters}
+        setLetters={setLetters}
         ranking={ranking}
       />
       <Answers letters={yesterdaysLetters} answers={yesterdaysAnswers} />

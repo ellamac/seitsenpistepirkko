@@ -1,5 +1,4 @@
 import { sanaObjects } from "../data/newData.js";
-import { shuffleLetters } from "./words.js";
 
 const allWords = sanaObjects;
 
