@@ -16,14 +16,16 @@
   flex-flow: column wrap;
 }
 
-.answers .words p {
+.answers .words a {
   width: calc(100% / 3.5);
-  padding: 0;
+  padding: 0.3em 0;
   margin: 0;
   hyphens: auto;
+  color: initial;
+  text-decoration: none;
 }
 
-.answers .words p.isPangram {
+.answers .words a.isPangram {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--main-highlight-color);

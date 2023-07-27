@@ -17,16 +17,22 @@ const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
         </header>
         <main>
           {correctGuesses.map((a, i) => (
-            <p
-              className={isPangram(a) ? "isPangram" : "notPangram"}
+            <a
+              href={`https://www.kielitoimistonsanakirja.fi/#/${a}`}
+              target="_blank"
+              rel="noreferrer"
               key={a + i}
+              className={`${isPangram(a) ? "isPangram" : "notPangram"}`}
             >
-              {" "}
               {a}
-            </p>
+            </a>
           ))}
         </main>
         <a href={`whatsapp://send?text=${text}`}>Jaa tulokset Whatsappissa!</a>
+        <p>
+          Klikkaamalla sanaa avautuu Kielitoimiston sanakirjan määritelmä uuteen
+          ikkunaan.
+        </p>
       </button>
     </section>
   );

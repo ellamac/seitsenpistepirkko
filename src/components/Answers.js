@@ -22,20 +22,27 @@ const Answers = ({ letters, answers }) => {
             {letters.length > 0 ? letters.map((l) => l + " ") : "...loading"}
           </p>
           <p className="info">
-            Kirjaimista muodostui {answers.length} suomenkielistä sanaa:
+            Kirjaimista muodostui {answers.length} suomenkielistä sanaa.
           </p>
           <section className="words">
             {answers.length > 0
               ? answers.sort().map((w, i) => (
-                  <p
+                  <a
+                    href={`https://www.kielitoimistonsanakirja.fi/#/${w}`}
+                    target="_blank"
+                    rel="noreferrer"
                     key={w + i}
                     className={`${isPangram(w) ? "isPangram" : "notPangram"}`}
                   >
                     {w}
-                  </p>
+                  </a>
                 ))
               : "..loading"}
           </section>
+          <p>
+            Klikkaamalla sanaa avautuu Kielitoimiston sanakirjan määritelmä
+            uuteen ikkunaan.
+          </p>
         </main>
       ) : null}
     </section>

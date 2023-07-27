@@ -16,7 +16,7 @@ const Game = ({
 
   const addLetterToGuess = (letter) => () => {
     setInputMessage("");
-    setGuess((prevLetters) => prevLetters.concat(letter));
+    setGuess((prevLetters) => prevLetters.concat(letter.toUpperCase()));
   };
   const checkGuess = () => {
     let message = "";

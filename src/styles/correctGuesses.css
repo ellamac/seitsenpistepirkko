@@ -19,11 +19,20 @@ section.correctGuesses p {
   font-weight: 600;
 }
 
+section.correctGuesses button main a {
+  color: initial;
+  text-decoration: none;
+  padding: 0.2em 0;
+}
+
 section.correctGuesses button a {
   display: initial;
   color: var(--main-highlight-color);
 }
 
+section.correctGuesses button p {
+  text-align: left;
+}
 /*suljettu*/
 section.correctGuesses button.hidden {
   flex-flow: row nowrap;
@@ -41,11 +50,14 @@ section.correctGuesses button.hidden main {
   overflow-x: hidden;
   justify-content: flex-start;
 }
-section.correctGuesses button.hidden main p {
+section.correctGuesses button.hidden main a {
   margin-right: 0.5em;
   text-align: left;
+  display: initial;
 }
-section.correctGuesses button.hidden a {
+
+section.correctGuesses button.hidden a,
+section.correctGuesses button.hidden p {
   display: none;
 }
 
@@ -67,7 +79,7 @@ section.correctGuesses button.visible main {
   overflow-x: scroll;
 }
 
-section.correctGuesses button.visible main p {
+section.correctGuesses button.visible main a {
   width: calc(100% / 3);
   text-align: left;
 }
