@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Hive from "./Hive";
+import Ladybug from "./Ladybug";
 import { shuffleLetters } from "../helpers/words";
+import { countPoints } from "../helpers/points";
+
 const Game = ({
   correctGuesses,
   setCorrectGuesses,
   answers,
   setPoints,
-  countPoints,
   letters,
   ranking,
 }) => {
@@ -58,11 +59,7 @@ const Game = ({
   return (
     <section className="game">
       <p className="guessText">{guess}</p>
-      <Hive
-        letters={lettersOnLadyBug}
-        ranking={ranking}
-        onLetterClick={addLetterToGuess}
-      />
+      <Ladybug letters={letters} ranking={ranking} onClick={addLetterToGuess} />
       <section className="actionButtons">
         {inputMessage.length > 0 ? (
           <p className="message">{inputMessage}</p>
