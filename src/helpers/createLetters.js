@@ -4,13 +4,8 @@ const allWords = sanaObjects;
 
 export const currentDate = (n) => {
   const date = new Date();
-
-  let currentDay = String(date.getDate() - n).padStart(2, "0");
-  let currentMonth = String(date.getMonth() + 1).padStart(2, "0");
-  let currentYear = date.getFullYear();
-  // we will display the date as YYYY-MM-DD
-  let currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
-
+  date.setDate(date.getDate() - n);
+  let currentDate = date.toISOString().split("T")[0];
   return currentDate;
 };
 

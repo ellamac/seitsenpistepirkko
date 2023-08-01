@@ -1,88 +1,94 @@
-section.correctGuesses button {
+@import "./index.css";
+section.correctGuesses > button {
   margin: 0;
   padding: 1em;
   width: 100%;
   display: flex;
   gap: 0.5em;
-}
-section.correctGuesses button main {
-  display: flex;
+
+  > header > p {
+    padding: 0;
+    margin: 0.1em 0;
+  }
+
+  > main {
+    display: flex;
+    > a {
+      color: initial;
+      text-decoration: none;
+      padding: 0.2em 0;
+    }
+    > a.isPangram {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  > footer {
+    text-align: left;
+    > a {
+      display: initial;
+      color: var(--main-highlight-color);
+    }
+    > p {
+      margin: 0.1em 0;
+    }
+  }
 }
 
-section.correctGuesses p {
-  padding: 0;
-  margin: 0.1em 0;
-}
-
-.correctGuesses p.isPangram {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-section.correctGuesses button main a {
-  color: initial;
-  text-decoration: none;
-  padding: 0.2em 0;
-}
-
-section.correctGuesses button a {
-  display: initial;
-  color: var(--main-highlight-color);
-}
-
-section.correctGuesses button p {
-  text-align: left;
-}
 /*suljettu*/
 section.correctGuesses button.hidden {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-}
 
-section.correctGuesses button.hidden header {
-  text-align: left;
-  overflow: visible;
-  white-space: nowrap;
-}
-section.correctGuesses button.hidden main {
-  flex-flow: row nowrap;
-  overflow-x: hidden;
-  justify-content: flex-start;
-}
-section.correctGuesses button.hidden main a {
-  margin-right: 0.5em;
-  text-align: left;
-  display: initial;
-}
+  > header {
+    text-align: left;
+    overflow: visible;
+    white-space: nowrap;
+  }
 
-section.correctGuesses button.hidden a,
-section.correctGuesses button.hidden p {
-  display: none;
+  > main {
+    flex-flow: row nowrap;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    > a {
+      pointer-events: none;
+      margin-right: 0.5em;
+      text-align: left;
+      display: initial;
+    }
+  }
+  > footer {
+    display: none;
+  }
 }
 
 /*avattu*/
 section.correctGuesses button.visible {
   flex-flow: column wrap;
-}
-section.correctGuesses button.visible header {
-  flex: 0 0 100%;
-}
-section.correctGuesses button.visible main {
-  width: 100%;
-  max-height: 14em;
-  flex: 1 1 auto;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  overflow-x: scroll;
-}
 
-section.correctGuesses button.visible main a {
-  width: calc(100% / 3);
-  text-align: left;
-}
-section.correctGuesses button.visible a {
-  display: initial;
+  > header {
+    flex: 0 0 100%;
+  }
+
+  > main {
+    width: 100%;
+    max-height: 14em;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow-x: scroll;
+    > a {
+      pointer-events: initial;
+      width: calc(100% / 3);
+      text-align: left;
+    }
+  }
+
+  > footer {
+    display: initial;
+  }
 }

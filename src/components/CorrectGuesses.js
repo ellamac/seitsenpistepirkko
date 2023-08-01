@@ -28,11 +28,19 @@ const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
             </a>
           ))}
         </main>
-        <a href={`whatsapp://send?text=${text}`}>Jaa tulokset Whatsappissa!</a>
-        <p>
-          Klikkaamalla sanaa avautuu Kielitoimiston sanakirjan määritelmä uuteen
-          ikkunaan.
-        </p>
+        {correctGuesses.length > 0 ? (
+          <footer>
+            <a href={`whatsapp://send?text=${text}`}>
+              Jaa tulokset Whatsappissa!
+            </a>
+            <p>
+              Klikkaamalla sanaa avautuu Kielitoimiston sanakirjan määritelmä
+              uuteen ikkunaan.
+            </p>
+          </footer>
+        ) : (
+          <></>
+        )}
       </button>
     </section>
   );

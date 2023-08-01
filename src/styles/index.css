@@ -39,11 +39,14 @@ h1 {
   margin: 0;
 }
 h2 {
-  font-size: 1em;
+  font-size: 1.1em;
   padding: 0;
   margin: 0;
 }
-
+p,
+a {
+  font-size: 1.1em;
+}
 button {
   color: black !important;
   background-color: white;
