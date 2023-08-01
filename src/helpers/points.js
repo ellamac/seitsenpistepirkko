@@ -11,10 +11,13 @@ export const steps = [
 ];
 
 export const getRanking = (points, maxPoints) => {
+  console.log("++GETRANKING");
   return steps.find((s) => points <= maxPoints * s.limit);
 };
 
 export const countPoints = (word) => {
+  console.log("++COUNTPOINTS");
+
   let len = word.length;
   let isPan = isPangram(word);
   if (len < 5) {

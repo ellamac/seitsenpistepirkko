@@ -10,6 +10,8 @@
   ...
 }*/
 export const refactorWordList = (list) => {
+  console.log("++REFACTORWORDLIST");
+
   const newList = {};
   let eka = "";
   let toka = "";

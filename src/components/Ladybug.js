@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 const SvgComponent = (props) => {
+  useEffect(() => {
+    console.log("LADYBUG");
+  });
   return (
     <section className="ladybug">
       <svg

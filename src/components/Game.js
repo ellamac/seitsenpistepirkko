@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Ladybug from "./Ladybug";
 import { countPoints } from "../helpers/points";
 
@@ -13,7 +13,9 @@ const Game = ({
 }) => {
   const [inputMessage, setInputMessage] = useState("");
   const [guess, setGuess] = useState("");
-
+  useEffect(() => {
+    console.log("GAME");
+  });
   const addLetterToGuess = (letter) => () => {
     setInputMessage("");
     setGuess((prevLetters) => prevLetters.concat(letter.toUpperCase()));

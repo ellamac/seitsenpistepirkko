@@ -3,7 +3,9 @@ import { isPangram } from "../helpers/words";
 
 const Answers = ({ letters, answers }) => {
   const [showAnswers, setShowAnswers] = useState(false);
-
+  useEffect(() => {
+    console.log("ANSWERS");
+  });
   return (
     <section className="answers-main">
       <header>

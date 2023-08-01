@@ -3,6 +3,9 @@ import { steps } from "../helpers/points";
 const Ranking = ({ maxPoints, points, ranking }) => {
   const [hidden, setHidden] = useState(true);
   useEffect(() => {
+    console.log("RANKING");
+  });
+  useEffect(() => {
     setHidden(true);
     //Runs on every render if ends with });
     //Runs only on the first render if ends with }, []);

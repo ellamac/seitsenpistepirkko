@@ -3,7 +3,9 @@ import Modal from "./Modal";
 
 const Header = (props) => {
   const [showModal, setShowModal] = useState(true);
-
+  useEffect(() => {
+    console.log("HEADER");
+  });
   const toggleVisibility = () => {
     setShowModal((prev) => !prev);
   };

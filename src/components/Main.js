@@ -8,6 +8,10 @@ import Game from "./Game";
 import Answers from "./Answers";
 
 const Main = (props) => {
+  useEffect(() => {
+    console.log("MAIN");
+  });
+
   const [letters, setLetters] = useState(() =>
     localStorage.getItem("pangram") &&
     localStorage.getItem("pangram").length === 7
@@ -42,11 +46,14 @@ const Main = (props) => {
         download: true,
         header: true,
         complete: (results) => {
+          console.log("COMPLETE");
+          let todaysDate = currentDate(0);
+          let yesterdaysDate = currentDate(1);
           let todaysPan = results.data.find(
-            (p) => p.date === currentDate(0)
+            (p) => p.date === todaysDate
           ).pangram;
           let yesterdaysPan = results.data.find(
-            (p) => p.date === currentDate(1)
+            (p) => p.date === yesterdaysDate
           ).pangram;
           if (
             localStorage.getItem("pangram") &&

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { isPangram } from "../helpers/words";
 const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
   const [show, setShow] = useState(false);
-
+  useEffect(() => {
+    console.log("CORRECTGUESSES");
+  });
   return (
     <section className="correctGuesses">
       <button

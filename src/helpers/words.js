@@ -1,10 +1,14 @@
 import { pangramData } from "../data/pangrams.js";
 
 export const isPangram = (word) => {
+  console.log("++ISPANGRAM");
+
   return pangramData.includes(word);
 };
 
 export const shuffleLetters = (letters) => {
+  console.log("++shuffleLetters");
+
   let first = [letters[0]];
   let allButFirst = letters.slice(1);
 

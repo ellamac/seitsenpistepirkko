@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const Footer = (props) => {
+  useEffect(() => {
+    console.log("FOOTER");
+  });
   return (
     <footer className="mainFooter">
       <p>

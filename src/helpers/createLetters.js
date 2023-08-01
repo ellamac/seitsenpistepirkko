@@ -3,6 +3,7 @@ import { sanaObjects } from "../data/newData.js";
 const allWords = sanaObjects;
 
 export const currentDate = (n) => {
+  console.log("++CURRENTDATE");
   const date = new Date();
   date.setDate(date.getDate() - n);
   let currentDate = date.toISOString().split("T")[0];
@@ -10,6 +11,8 @@ export const currentDate = (n) => {
 };
 
 export const createAnswerList = (pangram) => {
+  console.log("++CREATEANSWERLIST");
+
   let letters = [];
   let words = [];
 
