@@ -14,6 +14,13 @@
   overflow-x: scroll;
   display: flex;
   flex-flow: column wrap;
+  &::-webkit-scrollbar {
+    height: 0.5em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--main-highlight-color);
+    border-radius: 1em;
+  }
 }
 
 .answers .words a {

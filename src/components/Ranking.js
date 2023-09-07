@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { steps } from "../helpers/points";
+import React, { useState, useEffect } from 'react';
+import { steps } from '../helpers.js';
 const Ranking = ({ maxPoints, points, ranking }) => {
   const [hidden, setHidden] = useState(true);
-  useEffect(() => {
-    console.log("RANKING");
-  });
+
   useEffect(() => {
     setHidden(true);
     //Runs on every render if ends with });
@@ -13,25 +11,25 @@ const Ranking = ({ maxPoints, points, ranking }) => {
   }, [maxPoints]);
 
   return (
-    <section className="ranking">
+    <section className='ranking'>
       <button
-        className={`steps ${hidden ? "hidden" : "visible"}`}
-        type="button"
+        className={`steps ${hidden ? 'hidden' : 'visible'}`}
+        type='button'
         onClick={() => setHidden((prev) => !prev)}
       >
-        <p className="points">
-          {points} {points.length === 1 ? "piste" : "pistettä"}
+        <p className='points'>
+          {points} {points.length === 1 ? 'piste' : 'pistettä'}
         </p>
-        <section className="ranks">
+        <section className='ranks'>
           {steps.map((s, i) => (
             <p
               key={s + i}
               className={`rank ${
-                points >= Math.floor(maxPoints * s.limit) ? "current" : ""
+                points >= Math.floor(maxPoints * s.limit) ? 'current' : ''
               }`}
             >
               {s.name.substring(0, 1)}
-              <span className="extra">
+              <span className='extra'>
                 {s.name.substring(1)}: {Math.floor(maxPoints * s.limit)} p
               </span>
             </p>

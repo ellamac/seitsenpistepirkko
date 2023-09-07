@@ -1,4 +1,4 @@
-@import "./index.css";
+@import './index.css';
 section.correctGuesses > button {
   margin: 0;
   padding: 1em;
@@ -52,6 +52,7 @@ section.correctGuesses button.hidden {
     flex-flow: row nowrap;
     overflow-x: hidden;
     justify-content: flex-start;
+
     > a {
       pointer-events: none;
       margin-right: 0.5em;
@@ -81,6 +82,13 @@ section.correctGuesses button.visible {
     align-items: flex-start;
     align-content: flex-start;
     overflow-x: scroll;
+    > section.words::-webkit-scrollbar {
+      width: 0.5em;
+    }
+    > section.words::-webkit-scrollbar-thumb {
+      background-color: var(--main-highlight-color);
+      border-radius: 1em;
+    }
     > a {
       pointer-events: initial;
       width: calc(100% / 3);

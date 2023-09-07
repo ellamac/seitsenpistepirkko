@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Modal from "./Modal";
+import React, { useState, useEffect } from 'react';
+import Modal from './Modal';
 
 const Header = (props) => {
   const [showModal, setShowModal] = useState(true);
-  useEffect(() => {
-    console.log("HEADER");
-  });
+
   const toggleVisibility = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <header className="mainHeader">
-      <section className="headerText">
+    <header className='mainHeader'>
+      <section className='headerText'>
         <h1>SEITSENPISTEPIRKKO</h1>
-        <button type="button" onClick={toggleVisibility}>
+        <button type='button' onClick={toggleVisibility}>
           säännöt
         </button>
       </section>
