@@ -46,6 +46,7 @@ const Main = (props) => {
         })
       );
       setCorrectGuesses([]);
+      localStorage.setItem('correctGuesses', JSON.stringify([]));
       setPoints(0);
       setRanking(getRanking(0, maxPoints));
       console.log('main-efe', correctGuesses, points, maxPoints, ranking);
