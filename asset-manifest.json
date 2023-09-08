@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/seitsenpistepirkko/static/css/main.2af55124.css",
-    "main.js": "/seitsenpistepirkko/static/js/main.cc30b427.js",
+    "main.js": "/seitsenpistepirkko/static/js/main.db31e0e8.js",
     "static/js/787.14942093.chunk.js": "/seitsenpistepirkko/static/js/787.14942093.chunk.js",
     "index.html": "/seitsenpistepirkko/index.html",
     "main.2af55124.css.map": "/seitsenpistepirkko/static/css/main.2af55124.css.map",
-    "main.cc30b427.js.map": "/seitsenpistepirkko/static/js/main.cc30b427.js.map",
+    "main.db31e0e8.js.map": "/seitsenpistepirkko/static/js/main.db31e0e8.js.map",
     "787.14942093.chunk.js.map": "/seitsenpistepirkko/static/js/787.14942093.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2af55124.css",
-    "static/js/main.cc30b427.js"
+    "static/js/main.db31e0e8.js"
   ]
 }
