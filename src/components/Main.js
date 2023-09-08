@@ -30,7 +30,6 @@ const Main = (props) => {
   const [ranking, setRanking] = useState(steps[0]);
 
   useEffect(() => {
-    console.log('main-efe');
     const lastVisit = localStorage.getItem('lastVisit') || false;
 
     if (lastVisit && lastVisit !== current) {
@@ -49,7 +48,6 @@ const Main = (props) => {
       localStorage.setItem('correctGuesses', JSON.stringify([]));
       setPoints(0);
       setRanking(getRanking(0, maxPoints));
-      console.log('main-efe', correctGuesses, points, maxPoints, ranking);
     }
     localStorage.setItem('lastVisit', current);
     setTodaysPangram(pangrams.find((obj) => obj.date === current) || null);
@@ -60,7 +58,6 @@ const Main = (props) => {
   }, [correctGuesses]);
 
   useEffect(() => {
-    console.log('main-efe-points', points, maxPoints);
     setRanking(getRanking(points, maxPoints));
   }, [points, maxPoints]);
 

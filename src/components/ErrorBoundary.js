@@ -37,7 +37,7 @@ class ErrorBoundary extends Component {
           >
             Tyhjennä sivun muisti ja päivitä
           </button>
-          {error.message && <span>Virheilmoitus: {error.message}</span>}
+          {error.message && <p>Virheilmoitus: {error.message}</p>}
         </div>
       );
     }

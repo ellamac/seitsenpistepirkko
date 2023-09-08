@@ -12,10 +12,8 @@ const Game = ({
 }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [guess, setGuess] = useState('');
-  console.log('game');
 
   useEffect(() => {
-    console.log('ranking-game', ranking);
     //Runs on every render if ends with });
     //Runs only on the first render if ends with }, []);
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const Modal = ({ hidden, toggleVisibility, content }) => {
-  console.log('mod');
-
   return (
     <section className={hidden ? 'modal hidden' : 'modal visible'}>
       <main>

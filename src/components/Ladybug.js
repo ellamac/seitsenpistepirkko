@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 const SvgComponent = (props) => {
-  console.log('lady');
-
   return (
     <section className='ladybug'>
       <svg

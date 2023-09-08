@@ -3,7 +3,6 @@ import { isPangram } from '../helpers.js';
 
 const Answers = ({ pangram, today }) => {
   const [showAnswers, setShowAnswers] = useState(false);
-  console.log('ans');
 
   const makeHintObjects = () => {
     const firstTwoLetters = today.words.map((w) => w.substring(0, 2));
