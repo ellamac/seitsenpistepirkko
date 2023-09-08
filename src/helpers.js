@@ -15,7 +15,11 @@ export const steps = [
 ];
 
 export const getRanking = (points, maxPoints) => {
-  console.log('ranking1', points, maxPoints);
+  console.log('ranking-helpers', points, maxPoints);
+  console.log(
+    'ranking-helping',
+    steps.find((s) => points <= maxPoints * s.limit)
+  );
   return steps.find((s) => points <= maxPoints * s.limit);
 };
 
