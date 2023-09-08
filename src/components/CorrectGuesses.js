@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { isPangram } from '../helpers.js';
 const CorrectGuesses = ({ maxWords, correctGuesses }) => {
   const [show, setShow] = useState(false);
+  console.log('corr');
 
   return (
     <section className='correctGuesses'>

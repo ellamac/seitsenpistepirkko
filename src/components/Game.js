@@ -12,6 +12,7 @@ const Game = ({
 }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [guess, setGuess] = useState('');
+  console.log('game');
 
   const addLetterToGuess = (letter) => () => {
     setInputMessage('');
@@ -62,6 +63,8 @@ const Game = ({
 
     setLetters(first.concat(allButFirst));
   };
+
+  if (!pangram || !correctGuesses) return <p>Jotain meni pieleen</p>;
   return (
     <section className='game'>
       <p className='guessText'>{guess}</p>

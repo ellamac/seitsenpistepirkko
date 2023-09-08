@@ -8,6 +8,7 @@ import Answers from './Answers';
 import pangrams from '../data/pangrams.js';
 
 const Main = (props) => {
+  console.log('main');
   const current = currentDate(0);
   const [todaysPangram, setTodaysPangram] = useState(
     pangrams.find((obj) => obj.date === current) || null
@@ -30,15 +31,23 @@ const Main = (props) => {
   const [ranking, setRanking] = useState(getRanking(points, maxPoints));
 
   useEffect(() => {
+    console.log('efe1');
+
     const lastVisit = localStorage.getItem('lastVisit') || false;
+    console.log('efe2');
+
     // if last visit is different from todays date,
     // make lastPangram pangram of that date and add guesses to it
     console.log(current);
     if (lastVisit && lastVisit !== current) {
+      console.log('efe3');
+
       setLastPangram({
         ...pangrams.find((p) => p.date === lastVisit),
         guesses: correctGuesses,
       });
+      console.log('efe4');
+
       localStorage.setItem(
         'lastPangram',
         JSON.stringify({
@@ -46,14 +55,22 @@ const Main = (props) => {
           guesses: correctGuesses,
         })
       );
+      console.log('efe5');
+
       setCorrectGuesses([]);
       setPoints(0);
     }
+    console.log('efe6');
+
     localStorage.setItem('lastVisit', current);
+    console.log('efe66');
+
     setTodaysPangram(pangrams.find((obj) => obj.date === current) || null);
   }, []);
 
   useEffect(() => {
+    console.log('efe7');
+
     localStorage.setItem('correctGuesses', JSON.stringify(correctGuesses));
   }, [correctGuesses]);
 
