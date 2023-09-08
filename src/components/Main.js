@@ -33,6 +33,7 @@ const Main = (props) => {
     const lastVisit = localStorage.getItem('lastVisit') || false;
     // if last visit is different from todays date,
     // make lastPangram pangram of that date and add guesses to it
+    console.log(current);
     if (lastVisit && lastVisit !== current) {
       setLastPangram({
         ...pangrams.find((p) => p.date === lastVisit),
@@ -60,7 +61,7 @@ const Main = (props) => {
     setRanking(getRanking(points, maxPoints));
   }, [points, maxPoints]);
 
-  const getText = () => {
+  /* const getText = () => {
     let emoji1 = '🐞';
     let rank = steps.indexOf(ranking);
     let text = `${
@@ -69,7 +70,7 @@ const Main = (props) => {
       correctGuesses.length
     } sanaa ja%0D%0Asain ${points} pistettä.%0D%0Ahttps://ellamac.github.io/seitsenpistepirkko/`;
     return text;
-  };
+  }; */
   return todaysPangram.letters.length === 0 ? (
     <h2>🐞 jotain meni pieleen 🐞</h2>
   ) : (
@@ -78,7 +79,6 @@ const Main = (props) => {
       <CorrectGuesses
         maxWords={todaysPangram.words.length}
         correctGuesses={correctGuesses}
-        text={getText()}
       />
       <Game
         correctGuesses={correctGuesses}

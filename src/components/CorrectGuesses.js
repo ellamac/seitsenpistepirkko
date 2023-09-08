@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { isPangram } from '../helpers.js';
-const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
+const CorrectGuesses = ({ maxWords, correctGuesses }) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -30,9 +30,6 @@ const CorrectGuesses = ({ maxWords, correctGuesses, text }) => {
         </main>
         {correctGuesses.length > 0 ? (
           <footer>
-            <a href={`whatsapp://send?text=${text}`}>
-              Jaa tulokset Whatsappissa!
-            </a>
             <p>
               Klikkaamalla sanaa avautuu Kielitoimiston sanakirjan määritelmä
               uuteen ikkunaan.
