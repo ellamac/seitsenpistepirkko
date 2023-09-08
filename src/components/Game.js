@@ -14,6 +14,8 @@ const Game = ({
   const [guess, setGuess] = useState('');
   console.log('game');
 
+  console.log('ranking', ranking);
+
   const addLetterToGuess = (letter) => () => {
     setInputMessage('');
     setGuess((prevLetters) => prevLetters.concat(letter.toUpperCase()));

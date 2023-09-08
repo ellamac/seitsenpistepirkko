@@ -75,6 +75,7 @@ const Main = (props) => {
   }, [correctGuesses]);
 
   useEffect(() => {
+    console.log('efepoints', points, maxPoints);
     setRanking(getRanking(points, maxPoints));
   }, [points, maxPoints]);
 

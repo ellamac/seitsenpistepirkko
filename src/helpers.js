@@ -15,7 +15,13 @@ export const steps = [
 ];
 
 export const getRanking = (points, maxPoints) => {
+  console.log('ranking1', points, maxPoints);
   return steps.find((s) => points <= maxPoints * s.limit);
+};
+
+export const isPangram = (word) => {
+  const letters = [...new Set(word)];
+  return letters.length === 7;
 };
 
 export const countPoints = (word) => {
@@ -28,11 +34,6 @@ export const countPoints = (word) => {
   } else {
     return len - 3;
   }
-};
-
-export const isPangram = (word) => {
-  const letters = [...new Set(word)];
-  return letters.length === 7;
 };
 
 export const shuffleLetters = (letters) => {
