@@ -8,7 +8,7 @@ import Answers from './Answers';
 import pangrams from '../data/pangrams.js';
 
 const Main = (props) => {
-  const current = '2023-09-09';
+  const current = currentDate(0);
   const [todaysPangram, setTodaysPangram] = useState(
     pangrams.find((obj) => obj.date === current) || null
   );
