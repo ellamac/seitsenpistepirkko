@@ -12,7 +12,7 @@ const Answers = ({ pangram, today }) => {
       counter[ft] ? (counter[ft] += 1) : (counter[ft] = 1)
     );
     const uniquefts = Object.keys(counter);
-    const ps = uniquefts.map((k) => (
+    const ps = uniquefts.sort().map((k) => (
       <p>
         {k}: {counter[k]}
       </p>
@@ -81,7 +81,11 @@ const Answers = ({ pangram, today }) => {
                   ))
                 : ''}
             </section>
-            <p>Et löytänyt {pangram.words?.length || 0} sanaa</p>
+            <p>
+              Et löytänyt{' '}
+              {pangram.words?.length - (pangram.guesses?.length || 0) || 0}{' '}
+              sanaa
+            </p>
             <section className='words'>
               {pangram.words?.length > 0
                 ? pangram.words
