@@ -4,50 +4,20 @@ import { isPangram } from '../helpers.js';
 const Answers = ({ pangram, today }) => {
   const [showAnswers, setShowAnswers] = useState(false);
 
-  const makeHintObjects = () => {
-    const firstTwoLetters = today.words.map((w) => w.substring(0, 2));
-    const counter = {};
-
-    firstTwoLetters.forEach((ft) =>
-      counter[ft] ? (counter[ft] += 1) : (counter[ft] = 1)
-    );
-    const uniquefts = Object.keys(counter);
-    const ps = uniquefts.sort().map((k) => (
-      <p>
-        {k}: {counter[k]}
-      </p>
-    ));
-    return ps;
-  };
-
   return (
     <section className='answers-main'>
       <header>
         <h2>Vastaukset ja vihjeet</h2>
         <button
           type='button'
-          onClick={() =>
-            setShowAnswers((prevState) =>
-              prevState === 'hints' || prevState === false ? 'answers' : false
-            )
-          }
+          onClick={() => setShowAnswers((prevState) => !prevState)}
         >
-          {showAnswers === 'answers'
+          {showAnswers
             ? 'Piilota vastaukset'
             : 'Näytä edellisen pelin vastaukset'}
         </button>
-        <button
-          type='button'
-          onClick={() =>
-            setShowAnswers((prevState) =>
-              prevState === 'answers' || prevState === false ? 'hints' : false
-            )
-          }
-        >
-          {showAnswers === 'hints' ? 'Piilota vihjeet' : 'Näytä vihjeet'}
-        </button>
       </header>
-      {showAnswers === 'answers' ? (
+      {showAnswers ? (
         !pangram.words ? (
           <main>
             <p>Et ole aikaisemmin pelannut peliä</p>
@@ -112,9 +82,9 @@ const Answers = ({ pangram, today }) => {
             </p>
           </main>
         )
-      ) : showAnswers === 'hints' ? (
-        <main>{makeHintObjects()}</main>
-      ) : null}
+      ) : (
+        ''
+      )}
     </section>
   );
 };

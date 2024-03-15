@@ -1,0 +1,64 @@
+@import './index.css';
+
+section.words {
+  margin: 0;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5em;
+
+  > header {
+    flex: 0 0 100%;
+    padding: 0;
+    margin: 0.1em 0;
+  }
+
+  > main {
+    width: 100%;
+    max-height: 14em;
+    padding-bottom: 1em;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow-x: scroll;
+    > section.words::-webkit-scrollbar {
+      width: 0.5em;
+    }
+    > section.words::-webkit-scrollbar-thumb {
+      background-color: var(--main-highlight-color);
+      border-radius: 1em;
+    }
+
+    > a,
+    > p {
+      margin: 0;
+      padding: 0;
+      color: initial;
+      text-decoration: none;
+      padding: 0.2em 0;
+      pointer-events: initial;
+      width: calc(100% / 3);
+      text-align: left;
+    }
+    > a.isPangram {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  > footer {
+    text-align: left;
+    display: initial;
+    > a {
+      display: initial;
+      color: var(--main-highlight-color);
+    }
+    > p {
+      margin: 0.1em 0;
+    }
+  }
+}
