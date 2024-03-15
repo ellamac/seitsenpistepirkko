@@ -6,6 +6,7 @@ import CorrectGuesses from './CorrectGuesses';
 import Game from './Game';
 import Answers from './Answers';
 import pangrams from '../data/pangrams.js';
+import Words from './Words.jsx';
 
 const Main = (props) => {
   const current = currentDate(0);
@@ -28,6 +29,9 @@ const Main = (props) => {
       : 0
   );
   const [ranking, setRanking] = useState(steps[0]);
+  const [showHints, setShowHints] = useState(
+    () => JSON.parse(localStorage.getItem('showHints')) || 0
+  );
 
   useEffect(() => {
     const lastVisit = localStorage.getItem('lastVisit') || false;
@@ -46,6 +50,8 @@ const Main = (props) => {
       );
       setCorrectGuesses([]);
       localStorage.setItem('correctGuesses', JSON.stringify([]));
+      setShowHints([]);
+      localStorage.setItem('showHints', JSON.stringify(0));
       setPoints(0);
       setRanking(getRanking(0, maxPoints));
     }
@@ -56,6 +62,10 @@ const Main = (props) => {
   useEffect(() => {
     localStorage.setItem('correctGuesses', JSON.stringify(correctGuesses));
   }, [correctGuesses]);
+
+  useEffect(() => {
+    localStorage.setItem('showHints', JSON.stringify(showHints));
+  }, [showHints]);
 
   useEffect(() => {
     setRanking(getRanking(points, maxPoints));
@@ -75,10 +85,12 @@ const Main = (props) => {
     <h2>🐞 jotain meni pieleen 🐞</h2>
   ) : (
     <main className='mainMain'>
-      <Ranking points={points} maxPoints={maxPoints} ranking={ranking} />
-      <CorrectGuesses
+      <Words
         maxWords={todaysPangram.words.length}
         correctGuesses={correctGuesses}
+        todaysPangram={todaysPangram}
+        showHints={showHints}
+        setShowHints={setShowHints}
       />
       <Game
         correctGuesses={correctGuesses}
