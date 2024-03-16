@@ -50,8 +50,8 @@ const Main = (props) => {
       );
       setCorrectGuesses([]);
       localStorage.setItem('correctGuesses', JSON.stringify([]));
-      setShowHints([]);
-      localStorage.setItem('showHints', JSON.stringify(0));
+      setShowHints(0);
+      localStorage.setItem('showHints', 0);
       setPoints(0);
       setRanking(getRanking(0, maxPoints));
     }
@@ -64,7 +64,7 @@ const Main = (props) => {
   }, [correctGuesses]);
 
   useEffect(() => {
-    localStorage.setItem('showHints', JSON.stringify(showHints));
+    localStorage.setItem('showHints', showHints);
   }, [showHints]);
 
   useEffect(() => {
