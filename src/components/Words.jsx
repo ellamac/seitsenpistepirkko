@@ -44,7 +44,11 @@ const Words = ({
             if (showHints < 2) setShowHints((prev) => prev + 1);
           }}
         >
-          {showHints == 0 ? 'ensimmäinen kirjain' : 'toinen kirjain'}
+          {showHints == 0
+            ? 'paljasta ensimmäinen kirjain'
+            : showHints == 1
+            ? 'paljasta toinen kirjain'
+            : 'kaikki vihjeet käytetty'}
         </button>
       </footer>
     </section>
