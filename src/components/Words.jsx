@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { isPangram } from '../helpers.js';
+import React from 'react';
+
+import Word from './Word.jsx';
 const Words = ({
   maxWords,
   correctGuesses,
@@ -7,6 +8,14 @@ const Words = ({
   showHints,
   setShowHints,
 }) => {
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  };
+
   return (
     <section className='words'>
       <header>
@@ -15,26 +24,16 @@ const Words = ({
         </h2>
       </header>
       <main>
-        {todaysPangram.words.sort().map((w, i) =>
-          correctGuesses.includes(w) ? (
-            <a
-              href={`https://www.kielitoimistonsanakirja.fi/#/${w}`}
-              target='_blank'
-              rel='noreferrer'
-              key={`word-${i}`}
-              className={`${
-                isPangram(w) ? 'word isPangram' : 'word notPangram'
-              }`}
-            >
-              {w}
-            </a>
-          ) : (
-            <p key={`word-${i}`} className='word'>
-              {w.substring(0, showHints)}
-              {'_'.repeat(w.length - showHints)}
-            </p>
-          )
-        )}
+        {todaysPangram.words.sort().map((w, i) => (
+          <Word
+            key={`word-${i}`}
+            guessed={correctGuesses.includes(w)}
+            w={w}
+            showHints={showHints}
+            handleScroll={handleScroll}
+            number={i + 1}
+          />
+        ))}
       </main>
       <footer>
         <button

@@ -44,6 +44,9 @@ section.words {
       pointer-events: initial;
       width: calc(100% / 3);
       text-align: left;
+      &.showLength {
+        letter-spacing: 1px;
+      }
     }
     > a.isPangram {
       text-transform: uppercase;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { steps } from '../helpers.js';
-const Ranking = ({ maxPoints, points, ranking }) => {
+const Ranking = ({ maxPoints, points }) => {
   const [hidden, setHidden] = useState(true);
 
   useEffect(() => {

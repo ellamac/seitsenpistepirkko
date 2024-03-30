@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from './Modal';
 
-const Header = (props) => {
+const Header = () => {
   const [showModal, setShowModal] = useState(true);
 
   const toggleVisibility = () => {

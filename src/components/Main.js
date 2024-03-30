@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { countPoints, getRanking, steps, currentDate } from '../helpers.js';
-import Ranking from './Ranking';
 
-import CorrectGuesses from './CorrectGuesses';
 import Game from './Game';
 import Answers from './Answers';
 import pangrams from '../data/pangrams.js';
 import Words from './Words.jsx';
 
-const Main = (props) => {
+const Main = () => {
   const current = currentDate(0);
   const [todaysPangram, setTodaysPangram] = useState(
     pangrams.find((obj) => obj.date === current) || null
