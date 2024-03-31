@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { isPangram } from '../helpers';
 
 const Word = ({ guessed, w, showHints, handleScroll, number }) => {
   const wordRef = useRef(null);
   const hasPageBeenRendered = useRef(false);
+  const [flash, setFlash] = useState(false);
 
   useEffect(() => {
     if (hasPageBeenRendered.current) {
@@ -11,6 +12,10 @@ const Word = ({ guessed, w, showHints, handleScroll, number }) => {
     }
 
     hasPageBeenRendered.current = true;
+    setFlash((prev) => !prev);
+    setTimeout(() => {
+      setFlash((prev) => !prev);
+    }, 5000);
   }, [guessed]);
 
   return guessed ? (
@@ -19,7 +24,9 @@ const Word = ({ guessed, w, showHints, handleScroll, number }) => {
       href={`https://www.kielitoimistonsanakirja.fi/#/${w}`}
       target='_blank'
       rel='noreferrer'
-      className={`${isPangram(w) ? 'word isPangram' : 'word notPangram'}`}
+      className={`${isPangram(w) ? 'word isPangram' : 'word notPangram'} ${
+        flash ? 'flash' : ''
+      }`}
     >
       {number}. {w}
     </a>

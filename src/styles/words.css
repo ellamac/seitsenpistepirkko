@@ -52,6 +52,10 @@ section.words {
       text-transform: uppercase;
       font-weight: 600;
     }
+    > a.flash {
+      animation: blink 5s ease-in-out;
+      -webkit-animation: blink 5s ease-in-out;
+    }
   }
 
   > footer {
@@ -64,5 +68,34 @@ section.words {
     > p {
       margin: 0.1em 0;
     }
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    color: black;
+  }
+  15% {
+    color: var(--main-highlight-color);
+  }
+  80% {
+    color: var(--main-highlight-color);
+  }
+  100% {
+    color: black;
+  }
+}
+@keyframes blink {
+  0% {
+    color: black;
+  }
+  15% {
+    color: var(--main-highlight-color);
+  }
+  80% {
+    color: var(--main-highlight-color);
+  }
+  100% {
+    color: black;
   }
 }
