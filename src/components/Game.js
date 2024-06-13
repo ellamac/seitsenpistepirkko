@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Ladybug from './Ladybug';
+import Ladybug from './kukka';
 import { countPoints } from '../helpers.js';
 
 const Game = ({

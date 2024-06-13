@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --main-highlight-color: color(display-p3 0.87 0.29 0);
+  --main-highlight-color: color(display-p3 0.52 0.44 1);
 }
 
 .app {
@@ -129,7 +129,7 @@ footer.mainFooter p {
 
 .game .message {
   position: absolute;
-  background-color: color(display-p3 0.79 0.26 0.04);
+  background-color: var(--main-highlight-color);
   color: white;
   font-weight: 900;
   padding: 1em 2em;
