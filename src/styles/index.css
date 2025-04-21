@@ -19,7 +19,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --main-highlight-color: color(display-p3 0.52 0.44 1);
+  --main-highlight-color: color(display-p3 1 0.3 0);
+
+  article.app.layout-ladybug {
+    --main-highlight-color: color(display-p3 1 0.3 0);
+  }
+
+  article.app.layout-kukka {
+    --main-highlight-color: color(display-p3 0.63 0.53 1);
+  }
 }
 
 .app {
@@ -163,4 +171,17 @@ svg.ladybug .expression.visible {
 }
 svg.ladybug .expression.hidden {
   display: none;
+}
+
+svg .fill.purple-darkest,
+svg .fill.purple-darker {
+  fill: var(--main-highlight-color);
+}
+
+svg .fill.purple-lighter {
+  fill: color-mix(in display-p3, var(--main-highlight-color) 50%, white);
+}
+
+svg g {
+  text-align: center;
 }

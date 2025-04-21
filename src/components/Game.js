@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Ladybug from './kukka';
+import Kukka from './kukka';
+import Ladybug from './Ladybug.js';
 import { countPoints } from '../helpers.js';
 
 const Game = ({
@@ -9,6 +10,8 @@ const Game = ({
   pangram,
   setLetters,
   ranking,
+  gameLayout,
+  setGameLayout,
 }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [guess, setGuess] = useState('');
@@ -51,6 +54,9 @@ const Game = ({
   const clearGuess = () => {
     setGuess('');
   };
+  const changeUI = () => {
+    setGameLayout((prev) => (prev === 'ladybug' ? 'kukka' : 'ladybug'));
+  };
   const backspace = () => {
     setGuess((prev) => prev.substring(0, prev.length - 1));
   };
@@ -73,11 +79,20 @@ const Game = ({
   return (
     <section className='game'>
       <p className='guessText'>{guess}</p>
-      <Ladybug
-        letters={pangram.letters}
-        ranking={ranking}
-        onClick={addLetterToGuess}
-      />
+
+      {gameLayout === 'ladybug' ? (
+        <Ladybug
+          letters={pangram.letters}
+          ranking={ranking}
+          onClick={addLetterToGuess}
+        />
+      ) : (
+        <Kukka
+          letters={pangram.letters}
+          ranking={ranking}
+          onClick={addLetterToGuess}
+        />
+      )}
       <section className='actionButtons'>
         {inputMessage.length > 0 ? (
           <p className='message'>{inputMessage}</p>
@@ -91,6 +106,11 @@ const Game = ({
         </button>
         <button type='button' onClick={checkGuess}>
           Vastaa
+        </button>
+      </section>
+      <section className='actionButtons'>
+        <button type='button' onClick={changeUI}>
+          Vaihda pelilautaa
         </button>
       </section>
     </section>

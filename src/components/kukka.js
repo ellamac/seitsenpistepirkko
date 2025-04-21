@@ -19,6 +19,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[6])}>
                   <path
+                    className='fill purple-lighter'
                     fill='#C1B7EF'
                     d='M145.1,193.2c-60.9,0-93-11.3-109.1-20.7C10.5,157.7,6.9,132,12,113c5.4-19.8,22.4-39.8,48.4-39.8
 						c9.5,0,19.4,2.7,29.4,8c52,27.6,79.9,98.7,84.4,111.1C170,192.6,159.2,193.2,145.1,193.2z'
@@ -43,6 +44,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[5])}>
                   <path
+                    className='fill purple-darker'
                     fill='#A390FF'
                     d='M177,191c-7.8-11.3-53-79.1-53.2-129.1c0-14.4,5-27.2,14.6-36.8c10.3-10.3,24.9-16.2,40.2-16.2
 						c22.6,0,49.6,13.9,51.3,53.1C232.5,120.7,185.4,180.8,177,191z'
@@ -67,6 +69,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[4])}>
                   <path
+                    className='fill purple-lighter'
                     fill='#C1B7EF'
                     d='M225,195.4c-22,0-39.6-2.6-45.2-3.6c5.9-12.4,42-85.5,85.2-110.6c8.5-5,17.4-7.5,26.5-7.5
 						c23.3,0,45.2,17.1,52,40.5c6.6,22.8-2.7,44.2-25.5,58.8C302,183.3,272.9,195.4,225,195.4z'
@@ -93,6 +96,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[3])}>
                   <path
+                    className='fill purple-darker'
                     fill='#A390FF'
                     d='M292.5,313.9c-9.5,0-19.4-2.7-29.4-8c-52-27.6-79.9-98.7-84.4-111.1c4.3-0.3,15.1-1,29.1-1
 						c60.9,0,93,11.3,109.2,20.7c25.5,14.9,29.1,40.5,23.9,59.6C335.5,293.9,318.5,313.9,292.5,313.9z'
@@ -120,6 +124,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[2])}>
                   <path
+                    className='fill purple-lighter'
                     fill='#C1B7EF'
                     d='M175.2,377.7c-22.6,0-49.6-13.9-51.3-53.1c-2.6-58.7,44.5-118.8,52.9-129.1
 						c7.8,11.3,53,79.1,53.2,129.1c0,14.4-5,27.2-14.6,36.8C205.2,371.7,190.5,377.7,175.2,377.7z'
@@ -143,6 +148,7 @@ const SvgComponentNew = (props) => {
               <g>
                 <g className='button' onClick={props.onClick(props.letters[1])}>
                   <path
+                    className='fill purple-darker'
                     fill='#A390FF'
                     d='M63.7,312.4c-23.3,0-45.2-17.1-52.1-40.6C4.9,249,14.2,227.6,37.1,213c15.9-10.1,45-22.2,92.8-22.2
 						c22,0,39.7,2.6,45.4,3.6c-5.9,12.4-42,85.5-85.2,110.6C81.6,309.9,72.7,312.4,63.7,312.4z'
@@ -170,6 +176,7 @@ const SvgComponentNew = (props) => {
                 onClick={props.onClick(props.letters[0])}
               >
                 <circle
+                  className='fill purple-darkest'
                   fill='#846CFF'
                   stroke='#001635'
                   stroke-width='3.0637'
