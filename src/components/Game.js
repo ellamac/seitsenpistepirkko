@@ -112,11 +112,11 @@ const Game = ({
         <button className='backspace' type='button' onClick={backspace}>
           Kumita
         </button>
-        <button className='shuffle' type='button' onClick={shuffleLetters}>
-          Sekoita
-        </button>
         <button className='change' type='button' onClick={changeUI}>
           Vaihda pelilautaa
+        </button>
+        <button className='shuffle' type='button' onClick={shuffleLetters}>
+          Sekoita
         </button>
       </section>
     </section>
