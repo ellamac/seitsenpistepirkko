@@ -15,7 +15,7 @@ const SvgComponent = (props) => {
       >
         <g
           className={`ladybug ${
-            props.gameLayout === 'ladybug' ? 'visible' : 'hidden'
+            props.gamelayout === 'ladybug' ? 'visible' : 'hidden'
           }`}
         >
           <defs>
@@ -226,7 +226,7 @@ const SvgComponent = (props) => {
         </g>
         <g
           className={`flower ${
-            props.gameLayout === 'flower' ? 'visible' : 'hidden'
+            props.gamelayout === 'flower' ? 'visible' : 'hidden'
           }`}
         >
           <g
@@ -307,7 +307,7 @@ const SvgComponent = (props) => {
         </g>
         <g
           className={`letters ${
-            props.gameLayout === 'flower' ? 'flower' : 'ladybug'
+            props.gamelayout === 'flower' ? 'flower' : 'ladybug'
           }`}
         >
           <text

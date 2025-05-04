@@ -16,12 +16,6 @@ const Game = ({
   const [guess, setGuess] = useState('');
   const [showMessage, setShowMessage] = useState(false);
   const timerId = useRef(null);
-  useEffect(() => {
-    console.log('ranking', ranking);
-    //Runs on every render if ends with });
-    //Runs only on the first render if ends with }, []);
-    //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
-  }, [ranking]);
 
   const addLetterToGuess = (letter) => () => {
     if (showMessage) {

@@ -104,8 +104,8 @@ const Main = ({ gameLayout, setGameLayout }) => {
           })
         }
         ranking={ranking}
-        gameLayout={gameLayout}
-        setGameLayout={setGameLayout}
+        gamelayout={gameLayout}
+        setgamelayout={setGameLayout}
       />
       <Answers pangram={lastPangram} today={todaysPangram} />
     </main>
