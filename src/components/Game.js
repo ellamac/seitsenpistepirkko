@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Gameboard from './Gameboard.js';
 import { countPoints } from '../helpers.js';
 
@@ -14,7 +14,8 @@ const Game = ({
 }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [guess, setGuess] = useState('');
-
+  const [showMessage, setShowMessage] = useState(false);
+  const timerId = useRef(null);
   useEffect(() => {
     console.log('ranking', ranking);
     //Runs on every render if ends with });
@@ -23,10 +24,17 @@ const Game = ({
   }, [ranking]);
 
   const addLetterToGuess = (letter) => () => {
-    setInputMessage('');
+    if (showMessage) {
+      clearTimeout(timerId.current);
+      setShowMessage(false);
+      setGuess('');
+      setInputMessage('');
+      setShowMessage(false);
+    }
     setGuess((prevLetters) => prevLetters.concat(letter.toUpperCase()));
   };
   const checkGuess = () => {
+    setShowMessage(true);
     let message = '';
     let lowerCaseGuess = guess.toLowerCase();
     if (
@@ -46,11 +54,13 @@ const Game = ({
       message = 'ei oo sanalistassa';
     }
     setInputMessage(message);
-    setTimeout(() => {
+    timerId.current = setTimeout(() => {
+      setGuess('');
       setInputMessage('');
-      clearGuess();
-    }, '3000');
+      setShowMessage(false);
+    }, 3000);
   };
+
   const clearGuess = () => {
     setGuess('');
   };
@@ -59,9 +69,6 @@ const Game = ({
   };
   const backspace = () => {
     setGuess((prev) => prev.substring(0, prev.length - 1));
-  };
-  const clear = () => {
-    setGuess('');
   };
 
   const shuffleLetters = () => {
@@ -99,7 +106,7 @@ const Game = ({
         </button>
       </section>
       <section className='actionButtons'>
-        <button className='clear' type='button' onClick={clear}>
+        <button className='clear' type='button' onClick={clearGuess}>
           Tyhjennä
         </button>
         <button className='backspace' type='button' onClick={backspace}>
