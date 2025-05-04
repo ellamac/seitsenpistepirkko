@@ -7,6 +7,8 @@ const Words = ({
   todaysPangram,
   showHints,
   setShowHints,
+  points,
+  maxPoints,
 }) => {
   const handleScroll = (ref) => {
     ref.current.scrollIntoView({
@@ -20,7 +22,8 @@ const Words = ({
     <section className='words'>
       <header>
         <h2>
-          Olet löytänyt {correctGuesses.length} / {maxWords} sanaa
+          Olet löytänyt {correctGuesses.length} / {maxWords} sanaa. Pisteitä{' '}
+          {points} / {maxPoints}
         </h2>
       </header>
       <main>

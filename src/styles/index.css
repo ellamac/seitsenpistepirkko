@@ -19,14 +19,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --main-dark-color: black;
+  --main-mid-color: rgba(0, 0, 0, 0.25);
+  --main-light-color: white;
   --main-highlight-color: color(display-p3 1 0.3 0);
 
   article.app.layout-ladybug {
     --main-highlight-color: color(display-p3 1 0.3 0);
   }
 
-  article.app.layout-kukka {
-    --main-highlight-color: color(display-p3 0.63 0.53 1);
+  article.app.layout-flower {
+    --main-highlight-color: color(display-p3 1 0.73 0.12);
   }
 }
 
@@ -57,10 +60,10 @@ a {
   font-size: 1.1em;
 }
 button {
-  color: black !important;
-  background-color: white;
+  color: var(--main-dark-color) !important;
+  background-color: var(--main-light-color);
   border: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 4px var(--main-mid-color);
   border-radius: 1.5em;
   padding: 0.5em 0.8em;
   margin: 0.5em 0;
@@ -73,6 +76,8 @@ main.mainMain {
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (orientation: landscape) {
@@ -111,75 +116,173 @@ footer.mainFooter p {
 
 .game {
   text-align: center;
+  max-width: 60ch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
+
+section.messages {
+  .guessText,
+  .message {
+    margin: 0.5em 0;
+    min-height: 1em;
+    line-height: 1em;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+
+  .guessText p {
+    margin: 0;
+    padding: 0;
+  }
+  .message {
+    background-color: var(--main-highlight-color);
+    color: white;
+    font-weight: 900;
+    padding: 0.5em 1em;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5em;
+    flex: 1 0 40%;
+    &.hidden {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+.actionButtons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .actionButtons button {
   margin: 0.5em;
   padding: 1em 1.2em;
+  flex: 3 1 30%;
 }
+
+.fullwidth {
+  width: 100%;
+}
+
 .actionButtons p {
   line-height: 1em;
   margin: 0.5em 0;
   min-height: 1em;
 }
 
-.guessText {
-  margin: 0.5em 0;
-  min-height: 1em;
-  line-height: 1em;
-  font-weight: 700;
-  font-size: 1.8em;
-}
-
-.guessText p {
-  margin: 0;
-  padding: 0;
-}
-
+/*
 .game .message {
-  position: absolute;
+position: absolute; 
   background-color: var(--main-highlight-color);
   color: white;
   font-weight: 900;
   padding: 1em 2em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   border-radius: 1.5em;
-  top: 45%;
+  width: 50%;
+ top: 45%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%); 
   font-size: 1.5em;
+
+  &.flower {
+    transform: translate(-50%, -45%);
+  }
+}
+  */
+
+svg {
+  > text {
+    pointer-events: none;
+  }
+  > g.letters.flower text {
+    fill: color(display-p3 1 0.7 0.13) !important;
+  }
 }
 
 svg text {
   pointer-events: none;
 }
-svg.ladybug {
+g.ladybug.hidden {
+  display: none;
+}
+
+g.ladybug.visible {
+  display: initial;
+}
+
+g.flower.hidden {
+  display: none;
+}
+
+g.flower.visible {
+  display: initial;
+}
+
+section.gameboard {
+  width: 100%;
+}
+
+svg.ladybug,
+svg.gameboard {
   max-height: 45vh;
   max-width: 90vw;
 }
-svg.ladybug .redBody {
+svg.ladybug .redBody,
+svg.gameboard .redBody {
   fill: var(--main-highlight-color) !important;
 }
-svg.ladybug > * {
+svg.ladybug,
+svg.gameboard > * {
   font-weight: 700;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
-svg.ladybug .expression.visible {
+svg.ladybug .expression.visible,
+svg.gameboard .expression.visible {
   display: initial;
 }
-svg.ladybug .expression.hidden {
+svg.ladybug .expression.hidden,
+svg.gameboard .expression.hidden {
   display: none;
 }
 
 svg .fill.purple-darkest,
 svg .fill.purple-darker {
+  fill: var(--main-highlight-color) !important;
+}
+
+svg g.button.stroke path {
+  stroke: var(--main-highlight-color);
+}
+svg g.button.fill ellipse {
   fill: var(--main-highlight-color);
 }
 
-svg .fill.purple-lighter {
-  fill: color-mix(in display-p3, var(--main-highlight-color) 50%, white);
+svg {
+  g.letters {
+    &.flower text {
+      fill: var(--main-highlight-color);
+    }
+    &.flower .center {
+      fill: var(--main-light-color);
+    }
+    &.ladybug text {
+      fill: var(--main-light-color) !important;
+    }
+  }
+}
+
+svg g.letters text {
+  padding: 10px;
+  transform: translate(160.6 200.1);
 }
 
 svg g {

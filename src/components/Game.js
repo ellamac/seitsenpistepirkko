@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Kukka from './kukka';
-import Ladybug from './Ladybug.js';
+import Gameboard from './Gameboard.js';
 import { countPoints } from '../helpers.js';
 
 const Game = ({
@@ -17,6 +16,7 @@ const Game = ({
   const [guess, setGuess] = useState('');
 
   useEffect(() => {
+    console.log('ranking', ranking);
     //Runs on every render if ends with });
     //Runs only on the first render if ends with }, []);
     //Runs ion the first render and any time any dependency value changes if ends with }, [prop, state]);
@@ -45,20 +45,23 @@ const Game = ({
     } else {
       message = 'ei oo sanalistassa';
     }
-    clearGuess();
     setInputMessage(message);
     setTimeout(() => {
       setInputMessage('');
+      clearGuess();
     }, '3000');
   };
   const clearGuess = () => {
     setGuess('');
   };
   const changeUI = () => {
-    setGameLayout((prev) => (prev === 'ladybug' ? 'kukka' : 'ladybug'));
+    setGameLayout((prev) => (prev === 'ladybug' ? 'flower' : 'ladybug'));
   };
   const backspace = () => {
     setGuess((prev) => prev.substring(0, prev.length - 1));
+  };
+  const clear = () => {
+    setGuess('');
   };
 
   const shuffleLetters = () => {
@@ -78,38 +81,34 @@ const Game = ({
   if (!pangram || !correctGuesses) return <p>Jotain meni pieleen</p>;
   return (
     <section className='game'>
-      <p className='guessText'>{guess}</p>
-
-      {gameLayout === 'ladybug' ? (
-        <Ladybug
-          letters={pangram.letters}
-          ranking={ranking}
-          onClick={addLetterToGuess}
-        />
-      ) : (
-        <Kukka
-          letters={pangram.letters}
-          ranking={ranking}
-          onClick={addLetterToGuess}
-        />
-      )}
-      <section className='actionButtons'>
-        {inputMessage.length > 0 ? (
-          <p className='message'>{inputMessage}</p>
-        ) : null}
-
-        <button type='button' onClick={backspace}>
-          Kumita
-        </button>
-        <button type='button' onClick={shuffleLetters}>
-          Sekoita
-        </button>
-        <button type='button' onClick={checkGuess}>
+      <section className={`messages ${gameLayout}`}>
+        <p className={`message ${inputMessage ? 'visible' : 'hidden'}`}>
+          {inputMessage}
+        </p>
+        <p className='guessText'>{guess}</p>
+      </section>
+      <Gameboard
+        gameLayout={gameLayout}
+        letters={pangram.letters}
+        ranking={ranking}
+        onClick={addLetterToGuess}
+      />
+      <section className='actionButtons fullwidth'>
+        <button className='answer fullwidth' type='button' onClick={checkGuess}>
           Vastaa
         </button>
       </section>
       <section className='actionButtons'>
-        <button type='button' onClick={changeUI}>
+        <button className='clear' type='button' onClick={clear}>
+          Tyhjennä
+        </button>
+        <button className='backspace' type='button' onClick={backspace}>
+          Kumita
+        </button>
+        <button className='shuffle' type='button' onClick={shuffleLetters}>
+          Sekoita
+        </button>
+        <button className='change' type='button' onClick={changeUI}>
           Vaihda pelilautaa
         </button>
       </section>

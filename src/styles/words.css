@@ -26,10 +26,10 @@ section.words {
     align-items: flex-start;
     align-content: flex-start;
     overflow-x: scroll;
-    > section.words::-webkit-scrollbar {
-      width: 0.5em;
+    &::-webkit-scrollbar {
+      height: 0.5em;
     }
-    > section.words::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb {
       background-color: var(--main-highlight-color);
       border-radius: 1em;
     }

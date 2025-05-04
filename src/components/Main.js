@@ -5,6 +5,7 @@ import Game from './Game';
 import Answers from './Answers';
 import pangrams from '../data/pangrams.js';
 import Words from './Words.jsx';
+import Ranking from './Ranking.js';
 
 const Main = ({ gameLayout, setGameLayout }) => {
   const current = currentDate(0);
@@ -89,6 +90,8 @@ const Main = ({ gameLayout, setGameLayout }) => {
         todaysPangram={todaysPangram}
         showHints={showHints}
         setShowHints={setShowHints}
+        points={points}
+        maxPoints={maxPoints}
       />
       <Game
         correctGuesses={correctGuesses}

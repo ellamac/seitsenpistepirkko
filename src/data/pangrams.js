@@ -23110,7 +23110,7 @@ export const pangrams = [
   },
   {
     date: '2025-05-04',
-    letters: ['v', 'h', 'l', 'u', 'p', 'j', 'a'],
+    letters: ['v', 'u', 'l', 'a', 'h', 'j', 'p'],
     words: [
       'vulva',
       'vaappu',
