@@ -33,7 +33,10 @@ section.words {
       background-color: var(--main-highlight-color);
       border-radius: 1em;
     }
-
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--main-highlight-color);
+      border-radius: 1em;
+    }
     > a,
     > p {
       margin: 0;
