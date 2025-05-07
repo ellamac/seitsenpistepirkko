@@ -9,8 +9,9 @@ const Game = ({
   pangram,
   setLetters,
   ranking,
-  gameLayout,
-  setGameLayout,
+  gamelayout,
+  setgamelayout,
+  ...rest
 }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [guess, setGuess] = useState('');
@@ -59,7 +60,7 @@ const Game = ({
     setGuess('');
   };
   const changeUI = () => {
-    setGameLayout((prev) => (prev === 'ladybug' ? 'flower' : 'ladybug'));
+    setgamelayout((prev) => (prev === 'ladybug' ? 'flower' : 'ladybug'));
   };
   const backspace = () => {
     setGuess((prev) => prev.substring(0, prev.length - 1));
@@ -82,14 +83,14 @@ const Game = ({
   if (!pangram || !correctGuesses) return <p>Jotain meni pieleen</p>;
   return (
     <section className='game'>
-      <section className={`messages ${gameLayout}`}>
+      <section className={`messages ${gamelayout}`}>
         <p className={`message ${inputMessage ? 'visible' : 'hidden'}`}>
           {inputMessage}
         </p>
         <p className='guessText'>{guess}</p>
       </section>
       <Gameboard
-        gameLayout={gameLayout}
+        gamelayout={gamelayout}
         letters={pangram.letters}
         ranking={ranking}
         onClick={addLetterToGuess}

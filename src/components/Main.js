@@ -7,7 +7,7 @@ import pangrams from '../data/pangrams.js';
 import Words from './Words.jsx';
 import Ranking from './Ranking.js';
 
-const Main = ({ gameLayout, setGameLayout }) => {
+const Main = ({ gamelayout, setgamelayout }) => {
   const current = currentDate(0);
   const [todaysPangram, setTodaysPangram] = useState(
     pangrams.find((obj) => obj.date === current) || null
@@ -83,7 +83,7 @@ const Main = ({ gameLayout, setGameLayout }) => {
   return todaysPangram.letters.length === 0 ? (
     <h2>🐞 jotain meni pieleen 🐞</h2>
   ) : (
-    <main className={`mainMain layout-${gameLayout}`}>
+    <main className={`mainMain layout-${gamelayout}`}>
       <Words
         maxWords={todaysPangram.words.length}
         correctGuesses={correctGuesses}
@@ -104,8 +104,8 @@ const Main = ({ gameLayout, setGameLayout }) => {
           })
         }
         ranking={ranking}
-        gamelayout={gameLayout}
-        setgamelayout={setGameLayout}
+        gamelayout={gamelayout}
+        setgamelayout={setgamelayout}
       />
       <Answers pangram={lastPangram} today={todaysPangram} />
     </main>

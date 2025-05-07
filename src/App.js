@@ -4,19 +4,19 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 const App = (props) => {
-  const [gameLayout, setGameLayout] = useState(
-    () => JSON.parse(localStorage.getItem('gameLayout')) || 'ladybug'
+  const [gamelayout, setgamelayout] = useState(
+    () => JSON.parse(localStorage.getItem('gamelayout')) || 'ladybug'
   );
 
   useEffect(() => {
-    localStorage.setItem('gameLayout', JSON.stringify(gameLayout));
-  }, [gameLayout]);
+    localStorage.setItem('gamelayout', JSON.stringify(gamelayout));
+  }, [gamelayout]);
 
   return (
-    <article className={`app layout-${gameLayout}`}>
+    <article className={`app layout-${gamelayout}`}>
       <Header />
       <ErrorBoundary fallback={<p>Something went wrong</p>}>
-        <Main gameLayout={gameLayout} setGameLayout={setGameLayout} />
+        <Main gamelayout={gamelayout} setgamelayout={setgamelayout} />
       </ErrorBoundary>
       <Footer />
     </article>
