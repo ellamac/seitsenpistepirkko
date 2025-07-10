@@ -129,7 +129,7 @@ footer.mainFooter p {
 section.messages {
   .guessText,
   .message {
-    margin: 0.5rem 0;
+    margin: 0 0 0.5rem;
     min-height: 1.25rem;
     line-height: 1.25rem;
     font-weight: 700;
@@ -236,7 +236,7 @@ section.gameboard {
 
 svg.ladybug,
 svg.gameboard {
-  max-height: 45vh;
+  max-height: 40vh;
   max-width: 90vw;
 }
 svg.ladybug .redBody,
