@@ -5,27 +5,27 @@ section.ranking button {
 section.ranking button.steps {
   width: 100%;
   display: flex;
-  padding: 1em;
+  padding: 1rrem;
 }
 
 section.ranking button.steps p {
   margin: 0;
-  padding: 0.8em 0.8em;
+  padding: 0.8rem 0.8rem;
   display: initial;
-  border-radius: 2em;
+  border-radius: 2rem;
   color: black;
   background-color: white;
 }
 
 section.ranking button.steps p.points {
-  padding: 0.5em 0.2em;
+  padding: 0.5rem 0.2rem;
   font-weight: 900;
 }
 
 section.ranking button.steps section.ranks p.rank {
-  padding: 0.4em 0.25em 0.1em;
-  flex: 0 0 1.5em;
-  height: 1.5em;
+  padding: 0.4rem 0.25rem 0.1rem;
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 section.ranking button.steps section.ranks p.current {
@@ -67,12 +67,12 @@ section.ranking button.steps.visible section.ranks {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1em;
+  gap: 1rem;
 }
 
 section.ranking button.steps.visible section.ranks p {
   flex: 1 1 auto;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   height: auto;
 }
 section.ranking button.steps.visible section.ranks p span.extra {

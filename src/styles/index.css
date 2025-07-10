@@ -2,6 +2,9 @@
 *:focus {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+html {
+  font-size: 16px;
+}
 html,
 body {
   width: 100vw;
@@ -41,32 +44,33 @@ body {
   justify-content: space-between;
 }
 .app > * {
-  padding: 1em 1em;
+  padding: 1rem 1rem;
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.4rem;
   font-weight: 900;
   padding: 0;
   margin: 0;
 }
 h2 {
-  font-size: 1.1em;
+  font-size: 1.25rem;
   padding: 0;
   margin: 0;
 }
 p,
-a {
-  font-size: 1.1em;
+a,
+button {
+  font-size: 0.9rem;
 }
 button {
   color: var(--main-dark-color) !important;
   background-color: var(--main-light-color);
   border: none;
   box-shadow: 0 0 4px var(--main-mid-color);
-  border-radius: 1.5em;
-  padding: 0.5em 0.8em;
-  margin: 0.5em 0;
+  border-radius: 1.5rem;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
   &:disabled {
     opacity: 0.5;
   }
@@ -75,14 +79,14 @@ button {
 main.mainMain {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1em;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
 
 @media (orientation: landscape) {
   main.mainMain {
-    padding: 1.5em 25vmin;
+    padding: 1.5rem 25vmin;
   }
 }
 
@@ -99,7 +103,7 @@ header.mainHeader section.headerText h1 {
 }
 
 header.mainHeader button {
-  margin: 0 1em;
+  margin: 0 1rem;
 }
 
 footer.mainFooter {
@@ -111,7 +115,6 @@ footer.mainFooter a,
 footer.mainFooter p {
   color: white;
   font-weight: 700;
-  line-height: 0.5em;
 }
 
 .game {
@@ -126,11 +129,11 @@ footer.mainFooter p {
 section.messages {
   .guessText,
   .message {
-    margin: 0.5em 0;
-    min-height: 1em;
-    line-height: 1em;
+    margin: 0.5rem 0;
+    min-height: 1.25rem;
+    line-height: 1.25rem;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 1.3rem;
   }
 
   .guessText p {
@@ -141,9 +144,9 @@ section.messages {
     background-color: var(--main-highlight-color);
     color: white;
     font-weight: 900;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    border-radius: 1.5em;
+    border-radius: 1.5rem;
     flex: 1 0 40%;
     &.hidden {
       background-color: transparent;
@@ -160,8 +163,8 @@ section.messages {
 }
 
 .actionButtons button {
-  margin: 0.5em;
-  padding: 1em 1.2em;
+  margin: 0.5rem;
+  padding: 1rem 1.2rem;
   flex: 3 1 45%;
 }
 
@@ -170,9 +173,9 @@ section.messages {
 }
 
 .actionButtons p {
-  line-height: 1em;
-  margin: 0.5em 0;
-  min-height: 1em;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+  min-height: 1rem;
 }
 
 /*
@@ -181,14 +184,14 @@ position: absolute;
   background-color: var(--main-highlight-color);
   color: white;
   font-weight: 900;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
   width: 50%;
  top: 45%;
   left: 50%;
   transform: translate(-50%, -55%); 
-  font-size: 1.5em;
+  font-size: 1.5rem;
 
   &.flower {
     transform: translate(-50%, -45%);
@@ -201,7 +204,10 @@ svg {
     pointer-events: none;
   }
   > g.letters.flower text {
-    fill: color(display-p3 1 0.7 0.13) !important;
+    fill: white;
+  }
+  > g.flower > path.outline {
+    stroke: var(--main-highlight-color);
   }
 }
 
@@ -259,20 +265,35 @@ svg .fill.purple-darker {
   fill: var(--main-highlight-color) !important;
 }
 
-svg g.button.stroke path {
+svg g.button.stroke path,
+svg g.button.stroke ellipse {
   stroke: var(--main-highlight-color);
+  fill: var(--main-light-color);
 }
+svg g.button.fill path,
 svg g.button.fill ellipse {
+  stroke: var(--main-light-color);
+  fill: var(--main-highlight-color);
+}
+
+svg g.button.light path,
+svg g.button.light ellipse {
+  stroke: var(--main-light-color);
+  fill: var(--main-light-color);
+}
+svg g.button.highlight path,
+svg g.button.highlight ellipse {
+  stroke: var(--main-highlight-color);
   fill: var(--main-highlight-color);
 }
 
 svg {
   g.letters {
     &.flower text {
-      fill: var(--main-highlight-color);
-    }
-    &.flower .center {
       fill: var(--main-light-color);
+    }
+    &.flower text .center {
+      fill: var(--main-highlight-color);
     }
     &.ladybug text {
       fill: var(--main-light-color) !important;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Gameboard from './Gameboard.js';
+import Gameboard from './gameboard-test.js';
 import { countPoints } from '../helpers.js';
 
 const Game = ({

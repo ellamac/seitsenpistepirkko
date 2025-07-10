@@ -1,31 +1,29 @@
 .answers-main {
-  margin: 1em 0 0;
+  margin: 1rem 0 0;
   width: 100%;
 }
-.answers-main h2 {
-  font-size: 1.5em;
-}
+
 .answers-main header button {
-  margin: 1em 1em 0 0;
+  margin: 1rem 1rem 0 0;
 }
 .answers .words {
-  padding: 0 0 1em;
-  max-height: 13em;
+  padding: 0 0 1rem;
+  max-height: 13rem;
   overflow-x: scroll;
   display: flex;
   flex-flow: column wrap;
   &::-webkit-scrollbar {
-    height: 0.5em;
+    height: 0.5rem;
   }
   &::-webkit-scrollbar-thumb {
     background-color: var(--main-highlight-color);
-    border-radius: 1em;
+    border-radius: 1rem;
   }
 }
 
 .answers .words a {
   width: calc(100% / 3.5);
-  padding: 0.3em 0;
+  padding: 0.3rem 0;
   margin: 0;
   hyphens: auto;
   color: initial;
