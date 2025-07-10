@@ -35,27 +35,36 @@ const SvgComponent = (props) => (
             <ellipse cx={168.7} cy={185.2} rx={48.8} ry={47.9} />
             <path fill='none' d='M151.8 163.9h34v32.7h-34z' />
           </g>
-          <ellipse cx={168.7} cy={54.4} rx={48.8} ry={47.9} />
-          <path fill='none' d='M151.8 32.8h34v32.7h-34z' />
-          <ellipse cx={284.2} cy={119.9} rx={48.8} ry={47.9} />
-          <path fill='none' d='M267.3 98.3h34V131h-34z' />
-          <ellipse cx={284.2} cy={250.6} rx={48.8} ry={47.9} />
-          <path fill='none' d='M267.3 229.3h34V262h-34z' />
-
-          <ellipse cx={168.7} cy={316.2} rx={48.8} ry={47.9} />
-          <path fill='none' d='M151.8 294.8h34v32.7h-34z' />
-
-          <ellipse cx={53.2} cy={250.5} rx={48.8} ry={47.9} />
-          <path fill='none' d='M35.4 229.2h36v34.4h-36z' />
-
-          <ellipse
-            cx={53.2}
-            cy={119.5}
-            data-name='ladybug_x5F_dot_x5F_6'
-            rx={48.8}
-            ry={47.9}
-          />
-          <path fill='none' d='M35.4 98.2h36v34.4h-36z' />
+          <g className='button' onClick={props.onClick(props.letters[1])}>
+            <ellipse cx={168.7} cy={54.4} rx={48.8} ry={47.9} />
+            <path fill='none' d='M151.8 32.8h34v32.7h-34z' />
+          </g>
+          <g className='button' onClick={props.onClick(props.letters[2])}>
+            <ellipse cx={284.2} cy={119.9} rx={48.8} ry={47.9} />
+            <path fill='none' d='M267.3 98.3h34V131h-34z' />
+          </g>
+          <g className='button' onClick={props.onClick(props.letters[3])}>
+            <ellipse cx={284.2} cy={250.6} rx={48.8} ry={47.9} />
+            <path fill='none' d='M267.3 229.3h34V262h-34z' />
+          </g>
+          <g className='button' onClick={props.onClick(props.letters[4])}>
+            <ellipse cx={168.7} cy={316.2} rx={48.8} ry={47.9} />
+            <path fill='none' d='M151.8 294.8h34v32.7h-34z' />
+          </g>
+          <g className='button' onClick={props.onClick(props.letters[5])}>
+            <ellipse cx={53.2} cy={250.5} rx={48.8} ry={47.9} />
+            <path fill='none' d='M35.4 229.2h36v34.4h-36z' />
+          </g>
+          <g className='button' onClick={props.onClick(props.letters[6])}>
+            <ellipse
+              cx={53.2}
+              cy={119.5}
+              data-name='ladybug_x5F_dot_x5F_6'
+              rx={48.8}
+              ry={47.9}
+            />
+            <path fill='none' d='M35.4 98.2h36v34.4h-36z' />
+          </g>
         </g>
         <ellipse
           cx={168.7}
@@ -269,7 +278,7 @@ const SvgComponent = (props) => (
             x={props.letters[2].toUpperCase() === 'I' ? 10 : 0}
             y={0}
           >
-            {props.letters[0].toUpperCase()}
+            {props.letters[2].toUpperCase()}
           </tspan>
         </text>
         <text
@@ -288,7 +297,7 @@ const SvgComponent = (props) => (
             x={props.letters[0].toUpperCase() === 'I' ? 10 : 0}
             y={0}
           >
-            {props.letters[2].toUpperCase()}
+            {props.letters[0].toUpperCase()}
           </tspan>
         </text>
       </g>
