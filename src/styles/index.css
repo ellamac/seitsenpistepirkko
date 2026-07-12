@@ -111,6 +111,7 @@ main.mainMain {
 }
 
 header.mainHeader {
+  overflow: auto;
   background-color: var(--main-highlight-color);
 }
 header.mainHeader section.headerText {
