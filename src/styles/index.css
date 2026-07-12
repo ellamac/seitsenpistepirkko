@@ -112,7 +112,8 @@ main.mainMain {
 }
 
 header.mainHeader {
-  overflow: auto;
+  max-width: 100vw;
+  overflow-x: auto;
   background-color: var(--main-highlight-color);
 }
 header.mainHeader section.headerText {
