@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 
-const Header = () => {
+const Header = ({ theme, setTheme }) => {
   const [showModal, setShowModal] = useState(true);
 
   const toggleVisibility = () => {
@@ -13,6 +13,9 @@ const Header = () => {
         <h1>SEITSENPISTEPIRKKO</h1>
         <button type='button' onClick={toggleVisibility}>
           säännöt
+        </button>
+        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+          {theme === 'dark' ? '☀️' : '🌙'}
         </button>
       </section>
       <Modal

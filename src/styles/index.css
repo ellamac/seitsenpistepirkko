@@ -15,17 +15,9 @@ body {
 }
 
 body {
-  font-size: 1.5vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   --main-dark-color: black;
   --main-mid-color: rgba(0, 0, 0, 0.25);
   --main-light-color: white;
-  --main-highlight-color: color(display-p3 1 0.3 0);
 
   article.app.layout-ladybug {
     --main-highlight-color: color(display-p3 1 0.3 0);
@@ -34,6 +26,34 @@ body {
   article.app.layout-flower {
     --main-highlight-color: color(display-p3 1 0.73 0.12);
   }
+
+  background-color: var(--main-light-color);
+  * {
+    color: var(--main-dark-color);
+  }
+}
+
+body.dark {
+  --main-dark-color: white;
+  --main-mid-color: rgba(255, 255, 255, 0.25);
+  --main-light-color: #121212;
+
+  article.app.layout-ladybug {
+    --main-highlight-color: color(display-p3 0.63 0.19 0);
+  }
+
+  article.app.layout-flower {
+    --main-highlight-color: color(display-p3 0.7 0.48 0);
+  }
+}
+
+body {
+  font-size: 1.5vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .app {
@@ -99,7 +119,7 @@ header.mainHeader section.headerText {
   align-items: center;
 }
 header.mainHeader section.headerText h1 {
-  color: white;
+  color: var(--main-light-color);
 }
 
 header.mainHeader button {
@@ -113,7 +133,7 @@ footer.mainFooter {
 
 footer.mainFooter a,
 footer.mainFooter p {
-  color: white;
+  color: var(--main-light-color);
   font-weight: 700;
 }
 
@@ -142,7 +162,7 @@ section.messages {
   }
   .message {
     background-color: var(--main-highlight-color);
-    color: white;
+    color: var(--main-light-color);
     font-weight: 900;
     padding: 0.5rem 0.8rem;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -178,33 +198,12 @@ section.messages {
   min-height: 0.8rem;
 }
 
-/*
-.game .message {
-position: absolute; 
-  background-color: var(--main-highlight-color);
-  color: white;
-  font-weight: 900;
-  padding: .8rem 2rem;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: 1.5rem;
-  width: 50%;
- top: 45%;
-  left: 50%;
-  transform: translate(-50%, -55%); 
-  font-size: 1.5rem;
-
-  &.flower {
-    transform: translate(-50%, -45%);
-  }
-}
-  */
-
 svg {
   > text {
     pointer-events: none;
   }
   > g.letters.flower text {
-    fill: white;
+    fill: var(--main-light-color);
   }
   > g.flower > path.outline {
     stroke: var(--main-highlight-color);
@@ -296,7 +295,7 @@ svg {
       fill: var(--main-highlight-color);
     }
     &.ladybug text {
-      fill: var(--main-light-color) !important;
+      fill: white !important;
     }
   }
 }

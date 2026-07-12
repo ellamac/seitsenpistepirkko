@@ -41,7 +41,7 @@ section.words {
     > p {
       margin: 0;
       padding: 0;
-      color: initial;
+      color: var(--main-dark-color);
       text-decoration: none;
       padding: 0.2rem 0;
       pointer-events: initial;
@@ -76,7 +76,7 @@ section.words {
 
 @-webkit-keyframes blink {
   0% {
-    color: black;
+    color: var(--main-dark-color);
   }
   15% {
     color: var(--main-highlight-color);
@@ -85,12 +85,12 @@ section.words {
     color: var(--main-highlight-color);
   }
   100% {
-    color: black;
+    color: var(--main-dark-color);
   }
 }
 @keyframes blink {
   0% {
-    color: black;
+    color: var(--main-dark-color);
   }
   15% {
     color: var(--main-highlight-color);
@@ -99,6 +99,6 @@ section.words {
     color: var(--main-highlight-color);
   }
   100% {
-    color: black;
+    color: var(--main-dark-color);
   }
 }

@@ -13,8 +13,8 @@ section.ranking button.steps p {
   padding: 0.8rem 0.8rem;
   display: initial;
   border-radius: 2rem;
-  color: black;
-  background-color: white;
+  color: var(--main-dark-color);
+  background-color: var(--main-light-color);
 }
 
 section.ranking button.steps p.points {
@@ -31,7 +31,7 @@ section.ranking button.steps section.ranks p.rank {
 section.ranking button.steps section.ranks p.current {
   display: initial;
   background-color: var(--main-highlight-color);
-  color: white;
+  color: var(--main-light-color);
 }
 
 section.ranking button.steps section.ranks {
